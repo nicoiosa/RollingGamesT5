@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+.colorNav {
+    background: #202020;
+    height: auto;
+
+
+}
+.logo{
+
+    width: 106px;
+}
+
+nav{
+
+    font-family: 'Dhurjati', sans-serif;;
+
+    font-size: 30px;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .marginNav {
+
+        padding-left: auto;
+    
+    }
+
+}
+
+@media screen and (max-width: 1023px) {
+   
+    .marginNav {
+
+        margin-left: 0px;
+    
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+  
+    .marginNav {
+
+        margin-left: 0px;
+    
+    }
+
+}
