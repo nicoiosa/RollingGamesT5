@@ -32,3 +32,13 @@ p {
   background: none;
   border: none;
 }
+  .myCardOverlay {
+    position: absolute;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5)
+  }
