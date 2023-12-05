@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 main {
@@ -26,9 +27,28 @@ main {
 nav {
 
     font-family: 'Dhurjati', sans-serif;
-    ;
+    
 
     font-size: 30px;
+    display: inline-block;
+
+}
+
+
+
+.tamañoInput {
+    margin-left: auto;
+    border-radius: 1.6rem;
+    width: 195px;
+
+
+}
+
+.tamañoInput:focus {
+
+    outline: 0;
+    border-color: #d13639;
+    box-shadow: 0 0 0 0.25rem #d13639;
 }
 
 .colorFooter {
@@ -122,15 +142,17 @@ nav {
 .footerIcons {
     font-size: 22px;
     margin-right: 13px;
-    
+
     color: #8a8887;
     transition: all .3s;
 }
-.footerSocial{
 
-margin-left: auto;
+.footerSocial {
+
+    margin-left: auto;
 
 }
+
 .footerIcons:hover {
 
     color: #d13639;
@@ -141,9 +163,11 @@ margin-left: auto;
     display: flex;
     align-items: center;
 }
-.ubicacionLista{
+
+.ubicacionLista {
     display: flex;
 }
+
 @media screen and (min-width: 1024px) {
     .marginNav {
 
@@ -172,10 +196,11 @@ margin-left: auto;
         margin-top: 17px;
 
     }
-    .footerSocial{
 
-     width: 208px;
-    
+    .footerSocial {
+
+        width: 208px;
+
     }
 
 }
@@ -203,6 +228,15 @@ margin-left: auto;
         width: 264px;
     }
 
+    .tamañoInput {
+        margin-left: 0px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-radius: 1.6rem;
+        width: 100%;
+
+
+    }
 }
 
 
@@ -329,7 +363,7 @@ margin-left: auto;
         width: 100%;
     }
 
-   
- 
+
+
 
 }
