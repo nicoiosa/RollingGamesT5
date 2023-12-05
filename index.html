@@ -16,8 +16,8 @@
 <body>
     <header></header>
     <main>
-        <section class="my-5 myContainer">
-            <div class="row">
+        <section class="my-5 myContainer ">
+            <div class="row justify-content-center">
                 <div id="carouselBanner" class="carousel slide col-8" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -47,12 +47,36 @@
                                 <div class="myCardOverlay">
                                     <img src="./img/destiny2Logo.png" class="mb-4" alt="Destiny 2 Logo">
                                     <p class="card-text">Realiza un trato peligroso para cumplir el último deseo de
-                                        Riven. Explora un laberinto, descubre una misión exótica y obtén nuevos tesoros.</p>
+                                        Riven. Explora un laberinto, descubre una misión exótica y obtén nuevos tesoros.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card text-bg-dark border-0">
+                                <img src="./img/inmortals33Banner.avif" class="card-img" alt="Banner">
+                                <div class="myCardOverlay">
+                                    <img src="./img/inmortals33Logo.png" class="mb-4" alt="33 Inmortals Logo">
+                                    <p class="card-text">Interpreta a un alma condenada y enfréntate a la ira de Dios.
+                                        Coopera para sobrevivir a monstruos y enormes jefes. Lucha por tu vida eterna.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="d-grid col-3 gap-2">
+                    <button class="btn rounded-4 myBannerBtn myActive" data-bs-target="#carouselBanner"
+                        data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">Los Game
+                        Awards</button>
+                    <button class="btn rounded-4 myBannerBtn" data-bs-target="#carouselBanner"
+                        data-bs-slide-to="1" aria-label="Slide 2">Fornite</button>
+                    <button class="btn rounded-4 myBannerBtn" data-bs-target="#carouselBanner"
+                        data-bs-slide-to="2" aria-label="Slide 3">Destiny 2</button>
+                    <button class="btn rounded-4 myBannerBtn" data-bs-target="#carouselBanner"
+                        data-bs-slide-to="3" aria-label="Slide 4">33 Inmortals</button>
+                </div>
+            </div>
         </section>
         <section class="mb-5 myContainer">
             <h2>Juegos Gratis</h2>
