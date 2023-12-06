@@ -16,19 +16,71 @@
   <body>
     <header></header>
     <main class="bg-dark py-5">
-        <section class="container text-light">
-            <article class="row">
-                <div class="text-center col-md-6 py-1">
-                    <h1 class="italica">VIDEOGAMES</h1>
-                </div>
-                <div class="col-md-6 text-center py-3">
-                    <button class="btn btn-primary px-4 py-1">AGREGAR</button>
-                </div>
-            </article>
-            <article>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, eos facilis hic suscipit error quaerat assumenda quasi aspernatur commodi nemo quo nisi iure similique illo laudantium accusamus ex dolorum maiores!</p>
-            </article>
-        </section>
+      <section class="container text-light">
+        <article class="row">
+          <div class="text-center col-md-6 py-1">
+            <h1 class="italica">VIDEOGAMES</h1>
+          </div>
+          <div class="col-md-6 text-center py-2">
+            <button class="btn btn-primary px-4 py-1 btn-lg btnCuadrado">
+              AGREGAR
+            </button>
+          </div>
+        </article>
+        <article class="table-responsive text-center p-1">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col" class="text-start ps-5 text-secondary">
+                  Titulo
+                </th>
+                <th scope="col" class="px-5 text-secondary">Descripción</th>
+                <th scope="col" class="text-end pe-3 text-secondary">Precio</th>
+              </tr>
+            </thead>
+            <tbody class="border border-3 colorTexto">
+              <tr class="align-middle">
+                <th scope="row" class="h4 text-start ps-5">Fortnite</th>
+                <td class="w-25 py-3">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Saepe magnam vitae, beatae rem officia...
+                </td>
+                <td class="h4 text-end">Gratis</td>
+                <td class="text-end pe-3">
+                  <button class="btn btn-secondary btnCuadrado btn-sm py-0">
+                    DETALLES</button
+                  ><br />
+                  <button class="btn btn-warning btnCuadrado btn-sm py-0 px-3">
+                    EDITAR</button
+                  ><br />
+                  <button class="btn btn-danger btnCuadrado btn-sm py-0">
+                    ELIMINAR
+                  </button>
+                </td>
+              </tr>
+              <tr class="align-middle">
+                <th scope="row" class="h4 text-start ps-5">Fortnite</th>
+                <td class="w-25 py-3">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Saepe magnam vitae, beatae rem officia...
+                </td>
+                <td class="h4 text-end">Gratis</td>
+                <td class="text-end pe-3">
+                  <button class="btn btn-secondary btnCuadrado btn-sm py-0">
+                    DETALLES</button
+                  ><br />
+                  <button class="btn btn-warning btnCuadrado btn-sm py-0 px-3">
+                    EDITAR</button
+                  ><br />
+                  <button class="btn btn-danger btnCuadrado btn-sm py-0">
+                    ELIMINAR
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
     </main>
     <footer></footer>
     <script src="../js/bootstrap.min.js"></script>
