@@ -9,15 +9,37 @@
       name="description"
       content="Mejor tienda de videojuegos en el mercado ¡Compra tus juegos aqui!"
     />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <title>Rolling Games</title>
   </head>
-  <body>
+  <body class="bg-dark">
     <header></header>
-    <main>
-        <section></section>
+    <main class="container">
+      <section class="bg-light row my-4">
+        <article
+          class="col-12 col-md-6 text-center mt-3 d-flex align-items-center mb-3 m-md-0"
+        >
+          <div>
+            <h2 class="text-dark display-1 tituloError404">Error 404</h2>
+            <h2 class="tituloError404">PAGINA NO ENCONTRADA</h2>
+            <p class="h5 my-3 fuenteTexto">
+                ¡Ups! Te has aventurado en territorio desconocido. La página que buscas no está disponible. Regresa al punto de partida y explora nuestras ofertas de juegos en línea.
+            </p>
+            <a href="../index.html" class="btn btn-success btn-lg rounded-0 fuenteTexto">Volver a Inicio</a>
+          </div>
+        </article>
+        <div class="col-12 col-md-6">
+          <img
+            src="../img/error404.png"
+            alt="imagen de error 404"
+            class="img-fluid h-100"
+          />
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/app.js"></script>
   </body>
 </html>
