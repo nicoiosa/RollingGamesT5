@@ -27,7 +27,7 @@ main {
 nav {
 
     font-family: 'Dhurjati', sans-serif;
-    
+
 
     font-size: 30px;
     display: inline-block;
@@ -35,6 +35,22 @@ nav {
 }
 
 
+.margen_icono {
+
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.margen_admin {
+
+    margin-left: 19px;
+}
+
+.margen_tienda {
+
+    margin-right: 4px;
+
+}
 
 .tamañoInput {
     margin-left: auto;
@@ -175,6 +191,8 @@ nav {
 
     }
 
+   
+
     .footer {
 
         display: flex;
@@ -208,6 +226,11 @@ nav {
 @media screen and (max-width: 950px) {
     .marginNav {
         margin-left: 0px;
+    }
+
+    .margen_admin {
+
+        margin-left: 19px;
     }
 
     .footer {
@@ -246,6 +269,19 @@ nav {
         margin-left: 0px;
     }
 
+    .margen_icono {
+
+        margin-left: 0px;
+
+    }
+
+    .margen_admin {
+
+        margin-left: 6px;
+        margin-top: 11px;
+        margin-right: 10px;
+    }
+
     .footer {
 
         display: flex;
@@ -274,6 +310,18 @@ nav {
 
     .marginNav {
         margin-left: 0px;
+    }
+
+    .margen_icono {
+
+        margin-left: 0px;
+
+    }
+
+    .margen_admin {
+
+        margin-left: 0px;
+        margin-top: 11px;
     }
 
     .footer {
@@ -307,6 +355,31 @@ nav {
 
         margin-left: 0px;
 
+    }
+
+    .margen_icono {
+
+        margin-left: 0px;
+
+    }
+
+    .margen_admin {
+
+        margin-left: 0px;
+        margin-top: 11px;
+    }
+
+    .margen_sobreNosotros {
+
+        margin-bottom: 10px;
+
+
+
+    }
+
+    .margen_tienda {
+
+        margin-top: 11px;
     }
 
     .footer {
