@@ -16,9 +16,9 @@
 <body>
     <header></header>
     <main>
-        <section class="my-5 myContainer ">
+        <section class="my-5 container d-none d-sm-block">
             <div class="row justify-content-center">
-                <div id="carouselBanner" class="carousel slide col-8" data-bs-ride="carousel">
+                <div id="carouselBanner" class="carousel slide col-lg-9" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="card text-bg-dark border-0">
@@ -65,29 +65,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-grid col-3 gap-2">
-                    <button class="btn rounded-4 myBannerBtn myActive" data-bs-target="#carouselBanner"
-                        data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">Los Game
-                        Awards</button>
-                    <button class="btn rounded-4 myBannerBtn" data-bs-target="#carouselBanner"
-                        data-bs-slide-to="1" aria-label="Slide 2">Fornite</button>
-                    <button class="btn rounded-4 myBannerBtn" data-bs-target="#carouselBanner"
-                        data-bs-slide-to="2" aria-label="Slide 3">Destiny 2</button>
-                    <button class="btn rounded-4 myBannerBtn" data-bs-target="#carouselBanner"
-                        data-bs-slide-to="3" aria-label="Slide 4">33 Inmortals</button>
+                <div class="d-none d-lg-grid col-3 gap-2" id="bannerBtnsFather">
+                    <button class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center"
+                        data-bs-target="#carouselBanner" data-bs-slide-to="0" aria-current="true"
+                        aria-label="Slide 1"><img src="./img/gameAwardsBtn.avif" class="w-25 rounded-2" alt="Poster">
+                        <p>Game Awards</p>
+                    </button>
+                    <button class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center"
+                        data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"><img
+                            src="./img/fortniteBtn.avif" class="w-25 rounded-2" alt="Poster">
+                        <p>Fornite</p>
+                    </button>
+                    <button class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center"
+                        data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"><img
+                            src="./img/destiny2Btn.avif" class="w-25 rounded-2" alt="Poster">
+                        <p>Destiny 2</p>
+                    </button>
+                    <button class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center"
+                        data-bs-target="#carouselBanner" data-bs-slide-to="3" aria-label="Slide 4"><img
+                            src="./img/inmortals33Btn.avif" class="w-25 rounded-2" alt="Poster">
+                        <p>33 Inmortals</p>
+                    </button>
                 </div>
             </div>
         </section>
-        <section class="mb-5 myContainer">
+        <a id="freeGames"></a>
+        <section class="my-5 container text-center text-md-start">
             <h2>Juegos Gratis</h2>
             <div class="row mb-5">
-                <div class="col-3">
-                    <p>En Pixel Games te damos un juego gratutito todos los meses. Regresa para mas ofertas exclucivas.
+                <div class="col-md-7 col-lg-5 col-xxl-4">
+                    <p>En Pixel Games te damos un juego gratutito todos los meses. Regresa para mas ofertas
+                        exclucivas.
                         Descarga
                         un juego gratuito o unete a una comunidad de juegos free-to-play hoy.</p>
                 </div>
             </div>
-            <div class="d-flex gap-5 justify-content-center">
+            <div class="row gap-5 justify-content-around">
                 <div class="card myCard" style="width: 26rem;">
                     <a href="">
                         <img src="./img/alanWake2Poster.avif" class="card-img-top" alt="Game poster">
@@ -122,6 +135,218 @@
                     <div class="card-body">
                         <h5 class="card-title">Red Dead Redemption 2</h5>
                         <p class="card-text">Gratis Dic 20 - Dic 31</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-5 container text-center text-md-start">
+            <div class="row justify-content-md-center justify-content-lg-evenly">
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-between mb-5">
+                        <h3>Horror</h3>
+                        <a href="#" class="btn myBtn">Ver mas</a>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/slenderPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Slender The Arrival</h5>
+                                    <p class="card-text">$$7.29</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/slenderPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Slender The Arrival</h5>
+                                    <p class="card-text">$$7.29</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/slenderPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Slender The Arrival</h5>
+                                    <p class="card-text">$$7.29</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/slenderPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Slender The Arrival</h5>
+                                    <p class="card-text">$$7.29</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-between mb-5">
+                        <h3>Accion</h3>
+                        <a href="#" class="btn myBtn">Ver mas</a>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/sonicFrontiersPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sonic Frontiers</h5>
+                                    <p class="card-text">$59.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/sonicFrontiersPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sonic Frontiers</h5>
+                                    <p class="card-text">$59.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/sonicFrontiersPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sonic Frontiers</h5>
+                                    <p class="card-text">$59.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/sonicFrontiersPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sonic Frontiers</h5>
+                                    <p class="card-text">$59.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="d-flex justify-content-between mb-5">
+                        <h3>Carreras</h3>
+                        <a href="#" class="btn myBtn">Ver mas</a>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/wrcPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">EA SPORTS™ WRC</h5>
+                                    <p class="card-text">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/wrcPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">EA SPORTS™ WRC</h5>
+                                    <p class="card-text">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/wrcPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">EA SPORTS™ WRC</h5>
+                                    <p class="card-text">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="myCard card mb-5" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="./img/wrcPoster.avif" class="img-fluid rounded-start w-75" alt="Poster">
+                            </div>
+                            <div class="col-md-8 align-self-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">EA SPORTS™ WRC</h5>
+                                    <p class="card-text">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-5 container text-center text-md-start">
+            <div class="row justify-content-around">
+                <div class="col-lg-4 myCard card mb-3">
+                    <img src="./img/sales.avif" class="card-img-top rounded-3" alt="Imagen alusiva">
+                    <div class="card-body">
+                        <h5 class="card-title">Descuentos y Especiales</h5>
+                        <p class="card-text">Ahorra mucho en títulos populares y joyas ocultas. ¡Siempre hay algo en
+                            oferta en la Tienda de Epic Games!</p>
+                    </div>
+                    <div class="card-footer myCard"> <a href="#" class="card-link link-light align-bottom">Navegar</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 myCard card mb-3">
+                    <img src="./img/freeGames.avif" class="card-img-top rounded-3" alt="Imagen alusiva">
+                    <div class="card-body">
+                        <h5 class="card-title">Juegos Gratis</h5>
+                        <p class="card-text">Echa un vistazo a todas las ofertas de esta semana.</p>
+                    </div>
+                    <div class="card-footer myCard"><a href="#freeGames" class="card-link link-light align-bottom">Jugar
+                            Ahora</a></div>
+                </div>
+                <div class="col-lg-4 myCard card mb-3">
+                    <img src="./img/apps.avif" class="card-img-top rounded-3" alt="Imagen alusiva">
+                    <div class="card-body">
+                        <h5 class="card-title">Aplicaciones</h5>
+                        <p class="card-text">Disfruta de algunas de las mejores aplicaciones para música, juegos,
+                            creación y ¡mucho más!</p>
+                    </div>
+                    <div class="card-footer myCard">
+                        <a href="#" class="card-link link-light align-bottom">Navegar</a>
                     </div>
                 </div>
             </div>
