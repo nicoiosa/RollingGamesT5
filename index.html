@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -24,8 +24,7 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-                <div class="collapse navbar-collapse " id="navbarNav">
+                <div class="collapse navbar-collapse text-md-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="pe-3 margen_tienda">
                             <a class="nav-link active" aria-current="page" href="#">TIENDA</a>
@@ -34,38 +33,53 @@
                             <a class="nav-link" href="#">SOBRE NOSOTROS</a>
                         </li>
                     </ul>
-
-                      
-                    <div class="ms-auto me-2">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2 tamañoInput" type="search" placeholder="Buscar" aria-label="Search" maxlength="30">
-                           
-                        </form>
+                    <div class="ms-auto me-5">
                     </div>
-
-
-                    <ul class="navbar-nav ">
-                        <li class="me-2 margen_admin">
+                    <ul class="navbar-nav">
+                        <li class="me-4 margen_admin d-lg-none">
+                            <a class="nav-link" aria-current="page" href="#">CARRITO</a>
+                        </li>
+                        <li class="me-4  margen_icono d-lg-none">
+                            <a class="nav-link" href="#">LISTA DE DESEADOS</a>
+                        </li>
+                        <li class="me-4 margen_admin">
                             <a class="nav-link " href="#">ADMIN</a>
                         </li>
-                        <li class="me-3  margen_icono">
+                        <li class="me-4  margen_icono">
                             <a class="nav-link" href="#"><i class="bi bi-person-fill "></i></a>
                         </li>
                     </ul>
+                    <div class="d-flex justify-content-md-center">
+                        <form class="d-flex  d-lg-none" role="search">
+                            <input class="form-control p-3 mySearch rounded-5" type="search" placeholder="Buscar..."
+                                aria-label="Buscar" id="headerSearchBar">
+                        </form>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-
-        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem tenetur iure provident debitis optio corporis est facilis, quidem unde tempora expedita ab ratione sed rem amet, quibusdam ea, nisi vitae impedit aliquid pariatur cumque totam placeat molestias. Modi odio ipsa dolorum nesciunt similique vero asperiores iusto! Laboriosam voluptatem, ipsum modi adipisci blanditiis enim odit aliquam corrupti impedit omnis natus minus! Totam odit unde, porro saepe quibusdam quaerat similique doloribus exercitationem laboriosam, numquam, obcaecati nihil. Unde itaque veritatis magni repellendus tempore molestiae obcaecati corrupti amet reiciendis odit? Ullam aspernatur quibusdam est non dicta voluptatum fuga odio illo velit accusantium, nihil veritatis.</h1>
-
+        <nav class="py-3 navbar sticky-top secondNav d-none d-lg-block">
+            <div class="container">
+                <form class="d-flex" role="search">
+                    <div class="py-2 px-4 mySearch rounded-5">
+                        <input type="text" class="mySearchInput" placeholder="Buscar" aria-label="Buscar"
+                            aria-describedby="searchIcon">
+                        <span id="searchIcon"><i class="bi bi-search"></i></span>
+                    </div>
+                </form>
+                <div class="d-flex gap-5">
+                    <a class="nav-link" aria-current="page" href="#">CARRITO</a>
+                    <a class="nav-link" href="#">LISTA DE DESEADOS</a>
+                </div>
+            </div>
+        </nav>
     </main>
     <footer class="">
         <div class="container-fluid colorFooter py-4 tamañoFooter">
             <div class=" row ">
                 <div class="col-12 pb-4  alineacion">
-
                     <a href="index.html" class="ubicacionLogo">
                         <span>
                             <img src="./img/Rush (1)_preview_rev_1.png" alt="logo" class="footerLogo"></span>
@@ -83,21 +97,13 @@
                             <li class="inclinacionListaFooter"><a href="#" class="listaFooter">ASISTENCIA AL JUGADOR</a>
                             </li>
                         </ul>
-
                     </div>
-
                     <div class="footerSocial ">
-
                         <a href="#" class="footerIcons"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="footerIcons"><i class="bi bi-twitter-x"></i></a>
                         <a href="#" class="footerIcons"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footerIcons"><i class="bi bi-youtube"></i></a>
-
-
                     </div>
-
-
-
                 </div>
                 <hr class="hrFooter">
                 <div class="col-12 footer ">
@@ -105,7 +111,6 @@
                         <div class="cookies">
                             <a href="#" class="link colorLinksFooter">
                                 Preferencias de cookies
-
                             </a>
                         </div>
                         <div class="derechos">
@@ -118,20 +123,13 @@
                         </div>
                     </div>
                     <div class="ms-auto me-2 columna2">
-                        <a href="#ancla_inicio" class="ps-auto IrINICIO">ir al inicio <i class="bi bi-caret-up-fill "></i>
+                        <a href="#ancla_inicio" class="ps-auto IrINICIO">ir al inicio <i
+                                class="bi bi-caret-up-fill "></i>
                         </a>
-
                     </div>
-
-
-
                 </div>
             </div>
         </div>
-
-
-
-
     </footer>
     <script src="./js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
