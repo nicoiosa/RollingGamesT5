@@ -153,6 +153,12 @@ nav {
   border-color: #d13639;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #d13639;
 }
+.hover_nav_link{
+
+color: #8a8887;
+
+}
+
 @media screen and (min-width: 1024px) {
   .marginNav {
     padding-left: auto;
