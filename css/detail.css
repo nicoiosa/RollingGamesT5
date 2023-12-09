@@ -1,16 +1,19 @@
 .contenedor_contenido {
-
-
     margin-left: auto;
     margin-right: auto;
     width: 75%;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .margen_titulo {
     margin-top: 40px;
     margin-bottom: 20px;
+}
 
+.letra_titulo {
+    font-weight: 700;
+    font-size: 43px;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .calificacion {
@@ -21,75 +24,41 @@
     display: flex;
     justify-content: center;
     padding: 2px 4px;
-
-
-}
-
-.desaparece_sm {
-    display: flex;
-}
-
-.tamaño_trofeo {
-    height: 26px;
-    margin-left: 19px;
-
-}
-
-.margen_competitivo {
-    display: flex;
-    margin-left: 8px;
-
-}
-
-.tamaño_mouse {
-
-    height: 27px;
-
-}
-
-.tamaño_mouse {
-    margin-left: 10px;
-    margin-right: 3px;
 }
 
 .margen_resumen {
-    margin-top: 50px;
-    margin-bottom: 16px;
-
+    margin-top: 76px;
+    margin-bottom: 34px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .link_resumen {
-    font-size: 27px;
-    color: #FFFFFF;
+    font-size: 32px;
+    color: #ffffff;
     text-decoration: none;
     margin-top: 10px;
-
 }
 
-
 .link_resumen:hover {
-
     color: #919a9a;
-
 }
 
 .juego {
-
     display: flex;
-
-
 
 }
 
+.margen_descripcion_juego {
+    margin-top: 38px;
+    margin-bottom: 38px;
+}
+
 .tamaño_imagen_carrousel {
-
-    width: 76px;
-
+    width: 90px;
 }
 
 .carrousel_gris {
     filter: grayscale(40%);
-
 }
 
 .carrousel_gris:hover {
@@ -100,77 +69,67 @@
 .margen_cards_carrousel {
     margin-top: 10px;
 
-
 }
 
-
 .tamaño {
-    width: auto;
+    width: 40%;
 }
 
 .tamaño_fortnite {
-
-    width: 212px;
-
+    width: 220px;
 }
 
 .precio {
     margin-top: 10px;
     margin-bottom: 14px;
+
 }
 
 .margen_precio {
-
-    margin-left: 15px;
-
+    margin-left: 58px;
 }
 
 .añadir_carrito {
     margin-top: 10px;
-
-
 }
 
 .boton_comprar {
     width: 100%;
-
 }
 
 .boton1 {
-
-    color: #FFFFFF;
+    color: #ffffff;
     height: 40px;
 }
 
 .boton1:hover {
-
     border-color: aliceblue;
-
 }
 
 .boton2 {
-    color: #FFFFFF;
+    color: #ffffff;
+    margin-top: 10px;
     margin-bottom: 10px;
+    padding: 6px 12px;
 
+}
 
+.boton2 i {
+    margin-right: 8px;
 }
 
 .boton2:hover {
-
     border-color: purple;
-
 }
 
 .desarrollador {
-
     color: #8a8887;
+    margin-bottom: 13px;
 }
 
 .nombre_desarrollador {
-
     margin-left: 26px;
 }
-
 
 .centrar_desarrollador {
     display: flex;
@@ -184,15 +143,12 @@
 }
 
 .compartir {
-
     border-bottom-color: #8a8887;
     border-radius: 0%;
 }
 
 .compartir:hover i {
-
     color: rgb(6, 63, 138);
-
 }
 
 .reportar {
@@ -202,17 +158,11 @@
 
 .reportar:hover i {
     color: #d13639;
-
 }
 
 .letra {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 16px;
-}
-
-.margen_descripcion_juego {
-    margin-top: 31px;
-    margin-bottom: 28px;
 }
 
 .card_opiniones {
@@ -222,64 +172,126 @@
 
 .card_color_blanco {
     color: #ffffffaf;
-
-
+    margin-top: 8px;
 }
 
 .card_color_texto {
     color: #8a8887;
+    margin-top: 16px;
 
 
 }
 
 .margen_cards {
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 83px;
+    font-family: 'Roboto Condensed', sans-serif;
 
 
 }
 
 .reseñas {
-    font-size: 100px;
+    font-size: 74px;
+    font-family: 'Roboto Condensed', sans-serif;
 
 }
 
-@media screen and (min-width: 1024px) {}
+.prueba {
+    width: 100%;
+}
 
+.margen_contenedor_requisitos {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.carrousel_tamaño {
+    width: 90%;
+
+}
+
+
+
+.display_cads_carousel {
+    display: flex;
+
+}
+
+.reseñas {
+
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+}
+
+.btn-danger {
+
+    background-color: #d13639;
+
+
+}
+
+.btn-danger:hover {
+
+    background-color: #c52f32e0;
+
+
+}
+
+.btn-danger:active {
+    background-color: aqua;
+
+}
+
+.contenedor_boton_comprar {
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+    .margen_precio {
+        margin-left: 5px;
+    }
+
+
+}
 
 @media screen and (max-width: 1023px) {
     .desaparece_sm {
         display: none;
-
     }
 
     .juego {
-
         display: block;
         align-items: center;
     }
 
     .tamaño_fortnite {
         margin-top: 59px;
-
-
     }
 
     .centrar_fortnite {
         display: flex;
         justify-content: center;
-
     }
 
     .col_desarrollador_sm {
-
         width: 100%;
+
+
+
+    }
+
+    .col_generos_sm {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
     }
 
     .tamaño_cards_sm {
         width: 100%;
         margin-bottom: 25px;
-
     }
 
     .contenedor_boton_comprar {
@@ -289,63 +301,150 @@
 
     .boton_comprar {
         width: 70%;
+    }
+
+    .margen_precio {
+        margin-left: 130px;
+    }
+
+    .tamaño_fortnite {
+
+        width: 300px;
+    }
+
+    .tamaño {
+
+        width: 100%;
+        margin-top: 63px;
+        margin-bottom: 111px;
+
 
     }
 
-
-
 }
 
-
 @media screen and (max-width: 767px) {
-
-
     .margen_resumen {
-        margin-top: 21px;
-        margin-bottom: 16px;
-
+        margin-top: 47px;
+        margin-bottom: 18px;
     }
 
     #col_sm1 {
         width: 100%;
-
-
     }
 
     #col_sm2 {
-
         width: 100%;
-
-
     }
 
     .contenedor_contenido {
         width: 85%;
-
-
-    }
-
-
-    .desaparece_sm {
-        display: none;
-
     }
 
     .tamaño_imagen_carrousel {
+        width: 60px;
+    }
 
-        width: 44px;
+    .tamaño {
+        width: 100%;
+        margin-bottom: 60px;
+    }
 
+
+    .prueba {
+        width: 100%;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .margen_cards_carrousel {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
     }
 
     .tamaño_cards_sm {
         width: 100%;
         height: 100%;
         margin-bottom: 25px;
-
     }
 
     .reseñas {
         font-size: 70px;
+    }
 
+    .carrousel_tamaño {
+        width: 100%;
+        padding: 0%;
+    }
+
+    .prueba2 {
+
+        width: auto;
+    }
+
+    .tamaño {
+
+        width: 100%;
+    }
+    .tamaño_fortnite{
+
+        width: 210px;
+    }
+
+}
+
+
+@media screen and (max-width : 281px) {
+    .display_cards_carousel_1 {
+        display: flex;
+
+    }
+
+    .display_cards_carousel_2 {
+        display: flex;
+        margin-top: 5px;
+    }
+
+    .prueba2 {
+        margin-left: 5px;
+
+    }
+
+    .tamaño_imagen_carrousel {
+        width: 57px;
+    }
+
+    .reseñas {
+        font-size: 55px;
+        margin-bottom: 30px;
+        margin-top: 50px;
+
+    }
+
+    .margen_cards_carrousel {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .boton2 {
+
+        margin-bottom: 16px;
+
+    }
+
+    .margen_precio {
+
+        margin-left: 1px;
+    }
+    .tamaño_fortnite{
+
+        width: 218px;
     }
 }
