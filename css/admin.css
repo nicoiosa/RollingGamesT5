@@ -8,22 +8,11 @@
     border-radius: 0;
     transform: skewX(-6deg);
     color: #eee;
-    display: inline-block;
-    background: #0029af;    
+    background: #0029af;
 }
 
 .btnCuadrado:hover {
     background: rgba(0, 106, 255, 0.235);
-}
-
-.btnColorRojo {
-    color: white;
-    background-color: #d13639;
-}
-
-.btnColorNegro {
-    color: white;
-    background-color: rgb(36, 33, 33);
 }
 
 .colorTexto {
