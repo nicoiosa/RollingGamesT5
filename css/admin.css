@@ -8,11 +8,11 @@
     border-radius: 0;
     transform: skewX(-6deg);
     color: #eee;
-    background: #0029af;
+    background: #cc0e0e;
 }
 
 .btnCuadrado:hover {
-    background: rgba(0, 106, 255, 0.235);
+    background: rgba(255, 60, 0, 0.235);
 }
 
 .colorTexto {
@@ -37,7 +37,7 @@
 }
 
 .botonHover:hover {
-    background: rgba(0, 106, 255, 0.235);
+    background: rgba(255, 60, 0, 0.235);
 }
 
 .botonHover:hover .textoHover {
