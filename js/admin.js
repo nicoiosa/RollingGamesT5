@@ -5,11 +5,15 @@ const formularioAdminJuegos = document.querySelector(
   "#formularioAdministrarJuegos"
 );
 const titulo = document.querySelector("#titulo");
-const descripcion = document.querySelector("#descripcion");
 const precio = document.querySelector("#precio");
+const categoria = document.querySelector("#categoria");
+const imagen = document.querySelector("#imagen");
+const descripcion = document.querySelector("#descripcion");
+const requisitos = document.querySelector("#requisitos");
+const desarrollador = document.querySelector("#desarrollador");
 const modalJuego = new bootstrap.Modal(document.querySelector("#modalJuego"));
 const btnAgregar = document.querySelector("#btnAgregar");
-const listaJuegos = JSON.parse(localStorage.getItem("listaPeliculasKey")) || [];
+const listaJuegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
 // Funciones
 const guardarEnLocalStorage = () => {
@@ -45,15 +49,23 @@ const crearJuego = (e) => {
   // 1: Tomar info del form. "OK"
   // 2: Validar entrada. (crear funcion validar)
   const validarTitulo = true;
-  const validarDesc = true;
   const validarPrecio = true;
+  const validarCat = true;
+  const validarImg = true;
+  const validarDesc = true;
+  const validarReq = true;
+  const validarDev = true;
   // 3: Crear objeto pelicula.
-  if (validarTitulo && validarDesc && validarPrecio) {
+  if (validarTitulo && validarPrecio && validarCat && validarImg && validarDesc && validarReq && validarDev) {
     const nuevoJuego = new Juego(
       undefined,
       titulo.value,
+      precio.value,
+      categoria.value,
+      imagen.value,
       descripcion.value,
-      precio.value
+      requisitos.value,
+      desarrollador.value,
     );
     // 4: Guardar lista de juegos en localstorage.
     listaJuegos.push(nuevoJuego);
@@ -61,6 +73,7 @@ const crearJuego = (e) => {
     limpiarFormulario();
     // 5: Dibujar el juego nuevo en el html.
     crearFila(nuevoJuego, listaJuegos.length);
+    console.log(nuevoJuego);
   }
 };
 const abrirModalJuego = () => {
