@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap');
 .img{
-    width: 100%;
-    border-radius: 10%;
+    width: 150%;
+    height: 150px;
+   
     
 }
 .titulo,h1{
@@ -14,6 +15,7 @@
 .titulosec{
     color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
+    
    
 }
 .redes{
@@ -27,13 +29,13 @@
 }
 
 .box{
-    width: 113px;
-    height: 113px;
+    width: 45%;
+    height: 50px;
     
 }
-h5{
+h6{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size:2em;
+    font-size:1em;
     font-weight: 700;
 }
 
