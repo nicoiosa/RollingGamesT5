@@ -1,68 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Roboto+Condensed:wght@400;700&display=swap");
 
-.italica {
-    font-style: italic;
+h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
 }
 
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .btnCuadrado {
-    border-radius: 0;
-    transform: skewX(-6deg);
-    color: #eee;
-    background: #cc0e0e;
+  border-radius: 0;
+  transform: skewX(-6deg);
+  color: #eee;
+  background: #cc0e0e;
+  font-family: 'Dhurjati', sans-serif;
 }
 
 .btnCuadrado:hover {
-    background: rgba(255, 60, 0, 0.235);
+  background: rgba(255, 60, 0, 0.235);
 }
 
 .colorTexto {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .colorTextoSecundario {
-    color: #919a9a;
-    font-weight: 450;
+  color: #919a9a;
+  font-weight: 450;
 }
 
 .tituloAdministrador {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
 }
 
 .textoHover {
-    visibility: hidden;
-    position: fixed;
-    background: rgba(34, 34, 34, 0.915);
-    font-style: normal;
+  visibility: hidden;
+  position: fixed;
+  background: rgba(34, 34, 34, 0.915);
+  font-style: normal;
 }
 
 .botonHover:hover {
-    background: rgba(255, 60, 0, 0.235);
+  background: rgba(255, 60, 0, 0.235);
 }
 
 .botonHover:hover .textoHover {
-    visibility: visible;
-    margin-top: 5px;
-    font-style: italic;
+  visibility: visible;
+  margin-top: 5px;
 }
 
 .tamañoPrecio {
-    font-size: calc(1.275rem + .3vw);
+  font-size: calc(1.275rem + 0.3vw);
 }
 
 @media screen and (max-width: 767px) {
-    .tamañoPrecio {
-        font-size: 1rem;
-        padding: 0;
-    }
+  .tamañoPrecio {
+    font-size: 1rem;
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    .btnCuadrado {
-        /* btn-lg */
-        --bs-btn-padding-y: 0.5rem;
-        --bs-btn-padding-x: 1rem;
-        --bs-btn-font-size: 1.25rem;
-        --bs-btn-border-radius: var(--bs-border-radius-lg);
-    }
+  .btnCuadrado {
+    /* btn-lg */
+    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: 1.25rem;
+    --bs-btn-border-radius: var(--bs-border-radius-lg);
+  }
 }
