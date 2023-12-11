@@ -166,6 +166,36 @@
                 />
               </div>
               <div class="mb-3">
+                <label for="precio" class="form-label italica">Precio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="precio"
+                  aria-describedby="precio"
+                  minlength="2"
+                  maxlength="50"
+                  required
+                  placeholder="Ej: Gratis"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="categoria" class="form-label">Categoria</label>
+                <select id="categoria" class="form-control" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="Sandbox">Sandbox</option>
+                  <option value="Simulacion">Simulación</option>
+                  <option value="Fabricacion">Fabricación</option>
+                  <option value="Construccion">Construcción</option>
+                  <option value="Aventura">Aventura</option>
+                  <option value="Deportes">Deportes</option>
+                  <option value="Horror">Horror</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="text" class="form-control" id="imagen" aria-describedby="imagen" minlength="2" maxlength="50" required placeholder="Ej: ./img/error.jpg">
+              </div>
+              <div class="mb-3">
                 <label for="descripcion" class="form-label italica">Descripción</label>
                 <textarea
                   id="descripcion"
@@ -178,16 +208,28 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label for="precio" class="form-label italica">Precio</label>
+                <label for="requisitos" class="form-label italica">Requisitos del Sistema</label>
+                <textarea
+                  id="requisitos"
+                  rows="4"
+                  class="form-control"
+                  minlength="5"
+                  maxlength="200"
+                  placeholder="Ej: 4gb RAM. Procesador i5 o superior. Etc."
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="desarrollador" class="form-label italica">Desarrollador</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="precio"
-                  aria-describedby="precio"
+                  id="desarrollador"
+                  aria-describedby="desarrollador"
                   minlength="2"
-                  maxlength="50"
+                  maxlength="30"
                   required
-                  placeholder="Ej: Gratis"
+                  placeholder="Ej: Epic Games."
                 />
               </div>
               <div class="text-center">
