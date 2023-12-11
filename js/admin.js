@@ -1,7 +1,6 @@
 import Juego from "./classJuego.js";
 
 // Variables
-const fornai = new Juego(1, "Fortnite", "Juego de armas.", "Gratis");
 const formularioAdminJuegos = document.querySelector(
   "#formularioAdministrarJuegos"
 );
