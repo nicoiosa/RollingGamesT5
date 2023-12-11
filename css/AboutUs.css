@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap');
 .img{
-    height: 100px;
-    border-radius: 50%;
+    width: 100%;
+    border-radius: 10%;
+    
 }
-.titulo{
+.titulo,h1{
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight:700;
+    font-size:2em;
+    font-weight: 700;
     
     
 }
 .titulosec{
-    color: #919a9a;
+    color: #fff;
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
+   
 }
 .redes{
     display:flex;
@@ -29,3 +31,23 @@
     height: 113px;
     
 }
+h5{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:2em;
+    font-weight: 700;
+}
+
+.banner{
+
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.726)), url(../img/bannerpixelgames.jpg);
+    background-position: center;   
+    background-size: cover; 
+}
+
+
+
