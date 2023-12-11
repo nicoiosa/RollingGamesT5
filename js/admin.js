@@ -160,7 +160,15 @@ const crearJuego = (e) => {
     limpiarFormulario();
     // 5: Dibujar el juego nuevo en el html.
     crearFila(nuevoJuego, listaJuegos.length);
-    console.log(nuevoJuego);
+
+    Swal.fire({
+        icon: "success",
+        title: "VideoJuego Agregado con Éxito",
+        showConfirmButton: false,
+        background: "#343a40",
+        color: "#fff",
+        timer: 3000
+    });
   }
 };
 const abrirModalJuego = () => {
@@ -171,10 +179,17 @@ const cargaInicial = () => {
     // Dibujar filas.
     listaJuegos.map((itemJuego, posicion) =>
       crearFila(itemJuego, posicion + 1)
-    );
+    );    
   } else {
-    // Tarea: cambiar para más vista.
     alert("No hay juegos para mostrar.");
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No hay juegos para mostrar.",
+        background: "#343a40",
+        color: "#fff",
+        confirmButtonColor: "#cc0e0e"
+      });
   }
 };
 
