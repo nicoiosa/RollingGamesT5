@@ -3,16 +3,22 @@ export default class Juego {
     #titulo;
     #precio; 
     #categoria;
-    #imagen;
+    #imagenU;
+    #imagenD;
+    #imagenT;
+    #imagenC;
     #descripcion;
     #requisitos;
     #desarrollador;
-    constructor(codigo = uuidv4(), titulo, precio, categoria, imagen, descripcion, requisitos, desarrollador) {
+    constructor(codigo = uuidv4(), titulo, precio, categoria, imagenU, imagenD, imagenT, imagenC, descripcion, requisitos, desarrollador) {
         this.#codigo = codigo;
         this.#titulo = titulo;
         this.#precio = precio;
         this.#categoria = categoria;
-        this.#imagen = imagen;
+        this.#imagenU = imagenU;
+        this.#imagenD = imagenD;
+        this.#imagenT = imagenT;
+        this.#imagenC = imagenC;
         this.#descripcion = descripcion;
         this.#requisitos = requisitos;
         this.#desarrollador = desarrollador;
@@ -41,11 +47,29 @@ export default class Juego {
     set categoria(nuevoCategoria) {
         this.#categoria = nuevoCategoria;
     }
-    get imagen() {
-        return this.#imagen;
+    get imagenU() {
+        return this.#imagenU;
     }
-    set imagen(nuevoImagen) {
-        this.#imagen = nuevoImagen;
+    set imagenU(nuevoImagenU) {
+        this.#imagenU = nuevoImagenU;
+    }
+    get imagenD() {
+        return this.#imagenD;
+    }
+    set imagenD(nuevoImagenD) {
+        this.#imagenD = nuevoImagenD;
+    }
+    get imagenT() {
+        return this.#imagenT;
+    }
+    set imagenT(nuevoImagenT) {
+        this.#imagenT = nuevoImagenT;
+    }
+    get imagenC() {
+        return this.#imagenC;
+    }
+    set imagenC(nuevoImagenC) {
+        this.#imagenC = nuevoImagenC;
     }
     get descripcion() {
         return this.#descripcion;
@@ -72,7 +96,10 @@ export default class Juego {
             titulo: this.titulo,
             precio: this.precio,
             categoria: this.categoria,
-            imagen: this.imagen,
+            imagenU: this.imagenU,
+            imagenD: this.imagenD,
+            imagenT: this.imagenT,
+            imagenC: this.imagenC,
             descripcion: this.descripcion,
             requisitos: this.requisitos,
             desarrollador: this.desarrollador,

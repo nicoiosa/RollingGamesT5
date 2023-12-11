@@ -7,7 +7,10 @@ const formularioAdminJuegos = document.querySelector(
 const titulo = document.querySelector("#titulo");
 const precio = document.querySelector("#precio");
 const categoria = document.querySelector("#categoria");
-const imagen = document.querySelector("#imagen");
+const imagenU = document.querySelector("#imagenU");
+const imagenD = document.querySelector("#imagenD");
+const imagenT = document.querySelector("#imagenT");
+const imagenC = document.querySelector("#imagenC");
 const descripcion = document.querySelector("#descripcion");
 const requisitos = document.querySelector("#requisitos");
 const desarrollador = document.querySelector("#desarrollador");
@@ -30,7 +33,6 @@ const validarTexto = (elemento, minimo, maximo, nombre) => {
     return true;
   }
 };
-
 const validarPrecio = (precio) => {
   // Usar una expresión regular para validar el formato
   const formatoValido = /^\d+(\.\d{1,2})?\s?UD\$$/.test(precio);
@@ -55,7 +57,6 @@ const validarPrecio = (precio) => {
 
   return true;
 };
-
 const validarImagen = (imagen) => {
   // Expresión regular para validar una URL de imagen con extensiones jpeg, jpg, gif, png, bmp o webp
   const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp)$/i.test(imagen);
@@ -69,7 +70,6 @@ const validarImagen = (imagen) => {
 
   return true;
 };
-
 const validarCategoria = (categoria) => {
   if (
     categoria === "Sandbox" ||
@@ -121,7 +121,10 @@ const crearJuego = (e) => {
   const validarTitulo = validarTexto(titulo.value, 2, 30, "titulo");
   const validarPre = validarPrecio(precio.value);
   const validarCat = validarCategoria(categoria.value);
-  const validarImg = validarImagen(imagen.value);
+  const validarImgU = validarImagen(imagenU.value);
+  const validarImgD = validarImagen(imagenD.value);
+  const validarImgT = validarImagen(imagenT.value);
+  const validarImgC = validarImagen(imagenC.value);
   const validarDesc = validarTexto(descripcion.value, 5, 200, "descripcion");
   const validarReq = validarTexto(requisitos.value, 5, 200, "requisitos");
   const validarDev = validarTexto(desarrollador.value, 2, 30, "desarrollador");
@@ -130,7 +133,10 @@ const crearJuego = (e) => {
     validarTitulo &&
     validarPre &&
     validarCat &&
-    validarImg &&
+    validarImgU &&
+    validarImgD &&
+    validarImgT &&
+    validarImgC &&
     validarDesc &&
     validarReq &&
     validarDev
@@ -140,7 +146,10 @@ const crearJuego = (e) => {
       titulo.value,
       precio.value,
       categoria.value,
-      imagen.value,
+      imagenU.value,
+      imagenD.value,
+      imagenT.value,
+      imagenC.value,
       descripcion.value,
       requisitos.value,
       desarrollador.value
