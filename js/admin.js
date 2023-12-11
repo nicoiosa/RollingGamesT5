@@ -17,49 +17,74 @@ const listaJuegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
 // Funciones
 const validarTexto = (elemento, minimo, maximo, nombre) => {
-    if (elemento.length > maximo) {
-      // Aquí voy a hacer algo.
-      alert(`El campo '${nombre}' debe tener un máximo de ${maximo} caracteres.`);
-      return false;
-    }
-    if (elemento.length < minimo) {
-      // Aquí voy a hacer algo.
-      alert(`El campo '${nombre}' debe tener un mínimo de ${minimo} caracteres.`);
-      return false;
-    } else {
-      return true;
-    }
+  if (elemento.length > maximo) {
+    // Aquí voy a hacer algo.
+    alert(`El campo '${nombre}' debe tener un máximo de ${maximo} caracteres.`);
+    return false;
+  }
+  if (elemento.length < minimo) {
+    // Aquí voy a hacer algo.
+    alert(`El campo '${nombre}' debe tener un mínimo de ${minimo} caracteres.`);
+    return false;
+  } else {
+    return true;
+  }
 };
 
 const validarPrecio = (precio) => {
-    // Usar una expresión regular para validar el formato
-    const formatoValido = /^\d+(\.\d{1,2})?\s?UD\$$/.test(precio);
-  
-    if (!formatoValido) {
-      alert('El formato del precio no es válido. Debe ser un número seguido de "UD$".');
-      return false;
-    }
-  
-    // Extraer el número del precio
-    const numeroPrecio = parseFloat(precio);
-  
-    if (isNaN(numeroPrecio)) {
-      alert('El valor numérico del precio no es válido.');
-      return false;
-    }
-  
-    // Otras validaciones específicas, si es necesario
-  
+  // Usar una expresión regular para validar el formato
+  const formatoValido = /^\d+(\.\d{1,2})?\s?UD\$$/.test(precio);
+
+  if (precio === "Gratis" || precio === "gratis") {
     return true;
-  };
+  } else if (!formatoValido) {
+    alert(`
+      El formato del precio no es válido.
+      Debe ser un número seguido de "UD$".
+      O bien, si no cuesta nada entonces "Gratis".`);
+    return false;
+  }
+
+  // Extraer el número del precio
+  const numeroPrecio = parseFloat(precio);
+
+  if (isNaN(numeroPrecio) || numeroPrecio == 0) {
+    alert("El valor numérico del precio no es válido.");
+    return false;
+  }
+
+  return true;
+};
+
+const validarImagen = (imagen) => {
+  // Expresión regular para validar una URL de imagen con extensiones jpeg, jpg, gif, png, bmp o webp
+  const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp)$/i.test(imagen);
+
+  if (!formatoImagenValido) {
+    alert(
+      "La URL no es válida. Debe ser una URL de imagen con una extensión válida (jpeg, jpg, gif, png, bmp, webp)."
+    );
+    return false;
+  }
+
+  return true;
+};
 
 const validarCategoria = (categoria) => {
-    if(categoria === "Sandbox" || categoria === "Simulacion" || categoria === "Fabricacion" || categoria === "Construccion" || categoria === "Aventura" || categoria === "Deportes" || categoria === "Horror") {
-        return true;
-    } else {
-        alert("La categoria ingresada no es un categoria valida.");
-        return false;
-    }
+  if (
+    categoria === "Sandbox" ||
+    categoria === "Simulacion" ||
+    categoria === "Fabricacion" ||
+    categoria === "Construccion" ||
+    categoria === "Aventura" ||
+    categoria === "Deportes" ||
+    categoria === "Horror"
+  ) {
+    return true;
+  } else {
+    alert("La categoria ingresada no es un categoria valida.");
+    return false;
+  }
 };
 const guardarEnLocalStorage = () => {
   localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
@@ -93,15 +118,23 @@ const crearJuego = (e) => {
   e.preventDefault();
   // 1: Tomar info del form. "OK"
   // 2: Validar entrada. (crear funcion validar)
-  const validarTitulo = validarTexto(titulo.value,2,30,"titulo");
-  const validarPrecio = true;
+  const validarTitulo = validarTexto(titulo.value, 2, 30, "titulo");
+  const validarPre = validarPrecio(precio.value);
   const validarCat = validarCategoria(categoria.value);
-  const validarImg = true;
-  const validarDesc = validarTexto(descripcion.value,5,200,"descripcion");
-  const validarReq = validarTexto(requisitos.value,5,200,"requisitos");
-  const validarDev = validarTexto(desarrollador.value,2,30,"desarrollador");
+  const validarImg = validarImagen(imagen.value);
+  const validarDesc = validarTexto(descripcion.value, 5, 200, "descripcion");
+  const validarReq = validarTexto(requisitos.value, 5, 200, "requisitos");
+  const validarDev = validarTexto(desarrollador.value, 2, 30, "desarrollador");
   // 3: Crear objeto pelicula.
-  if (validarTitulo && validarPrecio && validarCat && validarImg && validarDesc && validarReq && validarDev) {
+  if (
+    validarTitulo &&
+    validarPre &&
+    validarCat &&
+    validarImg &&
+    validarDesc &&
+    validarReq &&
+    validarDev
+  ) {
     const nuevoJuego = new Juego(
       undefined,
       titulo.value,
@@ -110,7 +143,7 @@ const crearJuego = (e) => {
       imagen.value,
       descripcion.value,
       requisitos.value,
-      desarrollador.value,
+      desarrollador.value
     );
     // 4: Guardar lista de juegos en localstorage.
     listaJuegos.push(nuevoJuego);
@@ -137,7 +170,7 @@ const cargaInicial = () => {
 };
 
 // Más lógica
-formularioAdminJuegos.addEventListener("submit",crearJuego);
-btnAgregar.addEventListener("click",abrirModalJuego);
+formularioAdminJuegos.addEventListener("submit", crearJuego);
+btnAgregar.addEventListener("click", abrirModalJuego);
 
 cargaInicial();
