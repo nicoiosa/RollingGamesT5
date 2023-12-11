@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rolling Team 5 - Facundo Alejo Herrera" />
+    <meta name="keywords" content="tienda, videojuegos, gratis, descuentos" />
+    <meta
+      name="description"
+      content="Mejor tienda de videojuegos en el mercado ¡Compra tus juegos aqui!"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <script
+      src="https://kit.fontawesome.com/5c9d8505e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Rolling Games</title>
+  </head>
+  <body class="bg-dark">
+    <header></header>
+    <main class="py-5">
+      <section class="container text-light">
+        <article class="row mb-3">
+          <div class="text-center col-md-6 py-1 ps-lg-5 mb-1 mb-md-0">
+            <h1 class="italica tituloAdministrador display-4">VIDEOJUEGOS</h1>
+          </div>
+          <div class="col-md-5 col-lg-6 text-center text-md-end text-lg-center py-2 py-lg-3 mb-1 mb-md-0">
+            <button
+              class="btn px-4 py-lg-1 btnCuadrado border border-3 border-secondary"
+              id="btnAgregar"
+              data-bs-toggle="modal"
+              data-bs-target="#modalVideojuego"
+            >
+              AGREGAR
+            </button>
+          </div>
+        </article>
+        <article class="table-responsive text-center p-1">
+          <table class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span class="colorTextoSecundario italica">ID</span>
+                </th>
+                <th scope="col" class="text-start ps-5">
+                  <span class="colorTextoSecundario italica ps-3">Titulo</span>
+                </th>
+                <th scope="col" class="px-5">
+                  <span class="colorTextoSecundario italica">Descripción</span>
+                </th>
+                <th scope="col" class="text-end pe-3">
+                  <span class="colorTextoSecundario italica">Precio</span>
+                </th>
+                <th scope="col" class="text-end pe-4">
+                  <span class="colorTextoSecundario italica pe-3">Acciones</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="border border-4 border-secondary">
+              <tr class="align-middle border-bottom border-secondary border-2">
+                <th scope="row"><span class="colorTexto">1</span></th>
+                <td class="h4 text-start ps-4 ps-md-5">
+                  <span class="colorTexto">Fortnite</span>
+                </td>
+                <td class="w-25 py-3">
+                  <span class="colorTexto">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Saepe magnam vitae, beatae rem officia...
+                  </span>
+                </td>
+                <td class="tamañoPrecio text-md-end">
+                  <span class="colorTexto">Gratis</span>
+                </td>
+                <td class="text-end pe-5 pe-md-3">
+                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-info-square-fill"></i><p class="textoHover">Ver Detalle</p></button>                  
+                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-pencil-square"><p class="textoHover">Editar</p></i></button>
+                    <button class="btn btn-dark btn-sm botonHover border"><i class="bi bi-trash-fill"></i><p class="textoHover">Eliminar</p></button>
+                </td>
+              </tr>
+              <tr class="align-middle border-bottom border-secondary border-2">
+                <th scope="row"><span class="colorTexto">2</span></th>
+                <td class="h4 text-start ps-4 ps-md-5">
+                  <span class="colorTexto">Maincraft</span>
+                </td>
+                <td class="w-25 py-3">
+                  <span class="colorTexto">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Saepe magnam vitae, beatae rem officia...
+                  </span>
+                </td>
+                <td class="tamañoPrecio text-md-end">
+                  <span class="colorTexto">25 US$</span>
+                </td>
+                <td class="text-end pe-5 pe-md-3">
+                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-info-square-fill"></i><p class="textoHover">Ver Detalle</p></button>                  
+                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-pencil-square"><p class="textoHover">Editar</p></i></button>
+                    <button class="btn btn-dark btn-sm botonHover border"><i class="bi bi-trash-fill"></i><p class="textoHover">Eliminar</p></button>
+                </td>
+              </tr>
+              <tr class="align-middle border-bottom border-secondary border-2">
+                <th scope="row"><span class="colorTexto">3</span></th>
+                <td class="h4 text-start ps-4 ps-md-5 w-25">
+                  <span class="colorTexto">Crash Royal</span>
+                </td>
+                <td class="w-25 py-3">
+                  <span class="colorTexto">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Saepe magnam vitae, beatae rem officia...
+                  </span>
+                </td>
+                <td class="tamañoPrecio text-md-end p-sm-0">
+                  <span class="colorTexto">100 US$</span>
+                </td>
+                <td class="text-end pe-5 pe-md-3">
+                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-info-square-fill"></i><p class="textoHover">Ver Detalle</p></button>                  
+                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-pencil-square"><p class="textoHover">Editar</p></i></button>
+                    <button class="btn btn-dark btn-sm botonHover border"><i class="bi bi-trash-fill"></i><p class="textoHover">Eliminar</p></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalVideojuego"
+      tabindex="-1"
+      aria-labelledby="modalVideojuegoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-bg-dark">
+            <h2 class="modal-title fs-5 italica tituloAdministrador" id="modalVideojuegoLabel">
+              Ingresar Datos del Videojuego
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formularioAdministrarJuegos">
+              <div class="mb-3">
+                <label for="titulo" class="form-label italica">Titulo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="titulo"
+                  aria-describedby="titulo"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                  placeholder="Ej: Fortnite."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="descripcion" class="form-label italica">Descripción</label>
+                <textarea
+                  id="descripcion"
+                  rows="4"
+                  class="form-control"
+                  minlength="5"
+                  maxlength="200"
+                  required
+                  placeholder="Ej: Es un juego de armas."
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="precio" class="form-label italica">Precio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="precio"
+                  aria-describedby="precio"
+                  minlength="2"
+                  maxlength="50"
+                  required
+                  placeholder="Ej: Gratis"
+                />
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btnCuadrado">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>    
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
