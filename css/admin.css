@@ -8,6 +8,9 @@ h2 {
 body {
   font-family: "Roboto Condensed", sans-serif;
 }
+main {
+  background-color: #121212;
+}
 .btnCuadrado {
   border-radius: 0;
   transform: skewX(-6deg);
