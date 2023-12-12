@@ -4,6 +4,8 @@ export default class Juego {
     #precio; 
     #categoria;
     #imagenU;
+    #imagenP;
+    #imagenL;
     #imagenD;
     #imagenT;
     #imagenC;
@@ -16,6 +18,8 @@ export default class Juego {
         this.#precio = precio;
         this.#categoria = categoria;
         this.#imagenU = imagenU;
+        this.#imagenP = imagenP;
+        this.#imagenL = imagenL;
         this.#imagenD = imagenD;
         this.#imagenT = imagenT;
         this.#imagenC = imagenC;
@@ -52,6 +56,18 @@ export default class Juego {
     }
     set imagenU(nuevoImagenU) {
         this.#imagenU = nuevoImagenU;
+    }
+    get imagenP() {
+        return this.#imagenP;
+    }
+    set imagenP(nuevoImagenP) {
+        this.#imagenP = nuevoImagenP;
+    }
+    get imagenL() {
+        return this.#imagenL;
+    }
+    set imagenL(nuevoImagenL) {
+        this.#imagenL = nuevoImagenL;
     }
     get imagenD() {
         return this.#imagenD;
