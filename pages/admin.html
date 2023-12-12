@@ -63,66 +63,7 @@
               </tr>
             </thead>
             <tbody class="border border-4 border-secondary">
-              <tr class="align-middle border-bottom border-secondary border-2">
-                <th scope="row"><span class="colorTexto">1</span></th>
-                <td class="h4 text-start ps-4 ps-md-5">
-                  <span class="colorTexto">Fortnite</span>
-                </td>
-                <td class="w-25 py-3">
-                  <span class="colorTexto">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Saepe magnam vitae, beatae rem officia...
-                  </span>
-                </td>
-                <td class="tamañoPrecio text-md-end">
-                  <span class="colorTexto">Gratis</span>
-                </td>
-                <td class="text-end pe-5 pe-md-3">
-                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-info-square-fill"></i><p class="textoHover">Ver Detalle</p></button>                  
-                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-pencil-square"><p class="textoHover">Editar</p></i></button>
-                    <button class="btn btn-dark btn-sm botonHover border"><i class="bi bi-trash-fill"></i><p class="textoHover">Eliminar</p></button>
-                </td>
-              </tr>
-              <tr class="align-middle border-bottom border-secondary border-2">
-                <th scope="row"><span class="colorTexto">2</span></th>
-                <td class="h4 text-start ps-4 ps-md-5">
-                  <span class="colorTexto">Maincraft</span>
-                </td>
-                <td class="w-25 py-3">
-                  <span class="colorTexto">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Saepe magnam vitae, beatae rem officia...
-                  </span>
-                </td>
-                <td class="tamañoPrecio text-md-end">
-                  <span class="colorTexto">25 US$</span>
-                </td>
-                <td class="text-end pe-5 pe-md-3">
-                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-info-square-fill"></i><p class="textoHover">Ver Detalle</p></button>                  
-                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-pencil-square"><p class="textoHover">Editar</p></i></button>
-                    <button class="btn btn-dark btn-sm botonHover border"><i class="bi bi-trash-fill"></i><p class="textoHover">Eliminar</p></button>
-                </td>
-              </tr>
-              <tr class="align-middle border-bottom border-secondary border-2">
-                <th scope="row"><span class="colorTexto">3</span></th>
-                <td class="h4 text-start ps-4 ps-md-5 w-25">
-                  <span class="colorTexto">Crash Royal</span>
-                </td>
-                <td class="w-25 py-3">
-                  <span class="colorTexto">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Saepe magnam vitae, beatae rem officia...
-                  </span>
-                </td>
-                <td class="tamañoPrecio text-md-end p-sm-0">
-                  <span class="colorTexto">100 US$</span>
-                </td>
-                <td class="text-end pe-5 pe-md-3">
-                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-info-square-fill"></i><p class="textoHover">Ver Detalle</p></button>                  
-                    <button class="btn btn-dark btn-sm botonHover border mb-1 mb-md-0"><i class="bi bi-pencil-square"><p class="textoHover">Editar</p></i></button>
-                    <button class="btn btn-dark btn-sm botonHover border"><i class="bi bi-trash-fill"></i><p class="textoHover">Eliminar</p></button>
-                </td>
-              </tr>
+              <!-- aquí irán las filas -->
             </tbody>
           </table>
         </article>
@@ -131,15 +72,15 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="modalVideojuego"
+      id="modalJuego"
       tabindex="-1"
-      aria-labelledby="modalVideojuegoLabel"
+      aria-labelledby="modalJuegoLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header text-bg-dark">
-            <h2 class="modal-title fs-5 italica tituloAdministrador" id="modalVideojuegoLabel">
+            <h2 class="modal-title fs-5 italica tituloAdministrador" id="modalJuegoLabel">
               Ingresar Datos del Videojuego
             </h2>
             <button
@@ -165,6 +106,39 @@
                 />
               </div>
               <div class="mb-3">
+                <label for="precio" class="form-label italica">Precio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="precio"
+                  aria-describedby="precio"
+                  minlength="2"
+                  maxlength="50"
+                  required
+                  placeholder="Ej: 'Gratis' o '1 UD$'"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="categoria" class="form-label">Categoria</label>
+                <select id="categoria" class="form-control" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="Sandbox">Sandbox</option>
+                  <option value="Simulacion">Simulación</option>
+                  <option value="Fabricacion">Fabricación</option>
+                  <option value="Construccion">Construcción</option>
+                  <option value="Aventura">Aventura</option>
+                  <option value="Deportes">Deportes</option>
+                  <option value="Horror">Horror</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="form-label">Imagenes</label>
+                <input type="text" class="form-control mb-1" id="imagenU" aria-describedby="imagenU" minlength="2" maxlength="50" required placeholder="Ej: ./img/error1.jpg">
+                <input type="text" class="form-control mb-1" id="imagenD" aria-describedby="imagenD" minlength="2" maxlength="50" required placeholder="Ej: ./img/error2.jpg">
+                <input type="text" class="form-control mb-1" id="imagenT" aria-describedby="imagenT" minlength="2" maxlength="50" required placeholder="Ej: ./img/error3.jpg">
+                <input type="text" class="form-control" id="imagenC" aria-describedby="imagenC" minlength="2" maxlength="50" required placeholder="Ej: ./img/error4.jpg">
+              </div>
+              <div class="mb-3">
                 <label for="descripcion" class="form-label italica">Descripción</label>
                 <textarea
                   id="descripcion"
@@ -177,16 +151,28 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label for="precio" class="form-label italica">Precio</label>
+                <label for="requisitos" class="form-label italica">Requisitos del Sistema</label>
+                <textarea
+                  id="requisitos"
+                  rows="4"
+                  class="form-control"
+                  minlength="5"
+                  maxlength="200"
+                  placeholder="Ej: 4gb RAM. Procesador i5 o superior. Etc."
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="desarrollador" class="form-label italica">Desarrollador</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="precio"
-                  aria-describedby="precio"
+                  id="desarrollador"
+                  aria-describedby="desarrollador"
                   minlength="2"
-                  maxlength="50"
+                  maxlength="30"
                   required
-                  placeholder="Ej: Gratis"
+                  placeholder="Ej: Epic Games."
                 />
               </div>
               <div class="text-center">
@@ -199,6 +185,8 @@
     </div>    
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/admin.js" type="module"></script>
   </body>
 </html>
