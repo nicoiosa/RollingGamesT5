@@ -64,12 +64,11 @@ const validarImagen = (imagen) => {
 };
 const validarCategoria = (categoria) => {
   if (
-    categoria === "Sandbox" ||
-    categoria === "Simulacion" ||
-    categoria === "Fabricacion" ||
-    categoria === "Construccion" ||
-    categoria === "Aventura" ||
-    categoria === "Deportes" ||
+    categoria === "RPG" ||
+    categoria === "FPS" ||
+    categoria === "Accion" ||
+    categoria === "Estrategia" ||
+    categoria === "Carreras" ||
     categoria === "Horror"
   ) {
     return true;

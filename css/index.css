@@ -86,15 +86,15 @@ p {
   }
 }
 @media (min-width: 992px) {
-  #midColumn {
-    border-right: 1px solid #2a2a2a;
-  }
-  #leftColumn {
+  #padreGeneros > div:nth-child(1),
+  #padreGeneros > div:nth-child(2),
+  #padreGeneros > div:nth-child(5),
+  #padreGeneros > div:nth-child(6) {
     border-right: 1px solid #2a2a2a;
   }
 }
 @media screen and (min-width: 1400px) and (max-width: 1807px) {
   .myFreeCard {
     flex-basis: 35%;
-  } /* forces two items to a line */
+  }
 }
