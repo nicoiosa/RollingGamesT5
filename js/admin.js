@@ -121,7 +121,7 @@ const crearJuego = (e) => {
   const validarImgD = validarImagen(imagenD.value);
   const validarImgT = validarImagen(imagenT.value);
   const validarImgC = validarImagen(imagenC.value);
-  const validarDesc = validarTexto(descripcion.value, 5, 200, "descripcion");
+  const validarDesc = validarTexto(descripcion.value, 5, 500, "descripcion");
   const validarReq = validarTexto(requisitos.value, 5, 200, "requisitos");
   const validarDev = validarTexto(desarrollador.value, 2, 30, "desarrollador");
   if (
@@ -158,7 +158,7 @@ const crearJuego = (e) => {
         (juego) => juego.codigo === codigoEditando
       );
       listaJuegos[posicionJuego] = juegoEditado;
-      cerrarModalJuego()
+      cerrarModalJuego();
     } else {
       const nuevoJuego = new Juego(
         undefined,
@@ -239,6 +239,8 @@ window.editarJuego = (codigo) => {
     document.querySelector("#titulo").value = juegoAEditar.titulo;
     document.querySelector("#precio").value = juegoAEditar.precio;
     document.querySelector("#categoria").value = juegoAEditar.categoria;
+    document.querySelector("#imagenP").value = juegoAEditar.imagenP;
+    document.querySelector("#imagenL").value = juegoAEditar.imagenL;
     document.querySelector("#imagenU").value = juegoAEditar.imagenU;
     document.querySelector("#imagenD").value = juegoAEditar.imagenD;
     document.querySelector("#imagenT").value = juegoAEditar.imagenT;
