@@ -180,19 +180,8 @@ const cargaInicial = () => {
     listaJuegos.map((itemJuego, posicion) =>
       crearFila(itemJuego, posicion + 1)
     );    
-  } else {
-    alert("No hay juegos para mostrar.");
-    Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "No hay juegos para mostrar.",
-        background: "#343a40",
-        color: "#fff",
-        confirmButtonColor: "#cc0e0e"
-      });
-  }
-};
-
+  };
+}
 // Más lógica
 formularioAdminJuegos.addEventListener("submit", crearJuego);
 btnAgregar.addEventListener("click", abrirModalJuego);
