@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     <header>
         <nav class="navbar navbar-expand-lg colorNav navbar-dark px-lg-1" id="ancla_inicio">
             <div class="container-fluid">
-                <a class="navbar-brand p-0" href="./index.html"><img src="../img/Rush (1)_preview_rev_1.png" alt="logo"
+                <a class="navbar-brand p-0" href="../index.html"><img src="../img/Rush (1)_preview_rev_1.png" alt="logo"
                         class="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -30,10 +30,10 @@
                 <div class="collapse navbar-collapse text-md-center" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="pe-3 margen_tienda">
-                            <a class="nav-link active" aria-current="page" href="./index.html">TIENDA</a>
+                            <a class="nav-link" href="../index.html">TIENDA</a>
                         </li>
                         <li class="nav-item margen_sobreNosotros">
-                            <a class="nav-link" href="#">SOBRE NOSOTROS</a>
+                            <a class="nav-link" href="./aboutUs.html">SOBRE NOSOTROS</a>
                         </li>
                     </ul>
                     <div class="ms-auto me-5">
@@ -46,7 +46,7 @@
                             <a class="nav-link" href="#">LISTA DE DESEADOS</a>
                         </li>
                         <li class="me-4 margen_admin">
-                            <a class="nav-link " href="./pages/admin.html">ADMIN</a>
+                            <a class="nav-link " href="./admin.html">ADMIN</a>
                         </li>
                         <li class="me-4  margen_icono">
                             <button class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal"><i
@@ -57,6 +57,49 @@
             </div>
         </nav>
     </header>
+    <nav class="py-3 navbar sticky-top secondNav d-none d-lg-block">
+        <div class="container">
+            <form class="d-flex" role="search">
+                <div class="py-2 px-4 mySearch rounded-5">
+                    <input type="text" class="mySearchInput" placeholder="Buscar" aria-label="Buscar"
+                        aria-describedby="searchIcon">
+                    <span id="searchIcon"><i class="bi bi-search"></i></span>
+                </div>
+            </form>
+            <div class="d-flex gap-5">
+                <a class="nav-link hover_nav_link" aria-current="page" href="#">CARRITO</a>
+                <a class="nav-link hover_nav_link" href="#">LISTA DE DESEADOS</a>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="loginleModalLabel">Iniciar sesion</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail1" aria-describedby="emailHelp"
+                                placeholder="ejemplo@pixelgames.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control focus-ring-danger" id="loginPassword"
+                                placeholder="✱✱✱✱✱✱">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-lg myBtn">Iniciar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <main>
         <section>
             <div class="container-fluid ">
@@ -65,7 +108,7 @@
                         <div class="contenedor_contenido">
                             <div class="margen_titulo">
                                 <h2>
-                                    <span class="letra_titulo">Fortnite: Battle Royale</span>
+                                    <span class="letra_titulo"></span>
                                 </h2>
                             </div>
                             <div class="d-flex ">
@@ -92,26 +135,22 @@
                                             <div class="carousel-inner d-flex">
                                                 <div class="carousel-item active">
                                                     <div class="card text-bg-dark border-0">
-                                                        <img src="../img/detail/blade-2560x1440-2560x1440-6b1174ff6f66.jpg"
-                                                            class="card-img" alt="Banner">
+                                                        <img class="card-img" alt="Banner">
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="card text-bg-dark border-0">
-                                                        <img src="../img/detail/04-28br-c5s1-videoscreenshotresizing-environment-a-still014-3840x2160-3840x2160-5bcc9fa12e6f.jpg"
-                                                            class="card-img" alt="Banner">
+                                                        <img class="card-img" alt="Banner">
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="card text-bg-dark border-0">
-                                                        <img src="../img/detail/05-28br-c5s1-videoscreenshotresizing-environment-b-still006-3840x2160-3840x2160-1a0aac761512.jpg"
-                                                            class="card-img" alt="Banner">
+                                                        <img class="card-img" alt="Banner">
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item">
                                                     <div class="card text-bg-dark border-0">
-                                                        <img src="../img/detail/07-28br-c5s1-videoscreenshotresizing-environment-a-still007-3840x2160-3840x2160-0533a3239cbe.jpg"
-                                                            class="card-img" alt="Banner">
+                                                        <img class="card-img" alt="Banner">
                                                     </div>
                                                 </div>
                                                 <button class="carousel-control-prev" type="button"
@@ -133,15 +172,13 @@
                                                     class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
                                                     data-bs-target="#carouselBanner" data-bs-slide-to="0"
                                                     aria-current="true" aria-label="Slide 1">
-                                                    <img src="../img/detail/blade-2560x1440-2560x1440-6b1174ff6f66.jpg"
-                                                        class="  tamaño_imagen_carrousel" alt="Poster">
+                                                    <img class="  tamaño_imagen_carrousel" alt="Poster">
                                                 </button>
                                                 <button
                                                     class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
                                                     data-bs-target="#carouselBanner" data-bs-slide-to="1"
                                                     aria-label="Slide 2">
-                                                    <img src="../img/detail/04-28br-c5s1-videoscreenshotresizing-environment-a-still014-3840x2160-3840x2160-5bcc9fa12e6f.jpg"
-                                                        class="tamaño_imagen_carrousel rounded-2" alt="Poster">
+                                                    <img class="tamaño_imagen_carrousel rounded-2" alt="Poster">
                                                 </button>
                                             </div>
                                             <div class="display_cards_carousel_2 d-flex">
@@ -149,27 +186,18 @@
                                                     class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
                                                     data-bs-target="#carouselBanner" data-bs-slide-to="2"
                                                     aria-label="Slide 3">
-                                                    <img src="../img/detail/05-28br-c5s1-videoscreenshotresizing-environment-b-still006-3840x2160-3840x2160-1a0aac761512.jpg"
-                                                        class="tamaño_imagen_carrousel rounded-2" alt="Poster">
+                                                    <img class="tamaño_imagen_carrousel rounded-2" alt="Poster">
                                                 </button>
                                                 <button
                                                     class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
                                                     data-bs-target="#carouselBanner" data-bs-slide-to="3"
                                                     aria-label="Slide 4">
-                                                    <img src="../img/detail/07-28br-c5s1-videoscreenshotresizing-environment-a-still007-3840x2160-3840x2160-0533a3239cbe.jpg"
-                                                        class="tamaño_imagen_carrousel rounded-2" alt="Poster">
+                                                    <img class="tamaño_imagen_carrousel rounded-2" alt="Poster">
                                                 </button>
                                             </div>
                                         </div>
                                         <div class=" margen_descripcion_juego">
-                                            <span class="letra ">Crea, juega y combate con amigos de forma gratuita en
-                                                Fortnite. Consigue ser la última persona en pie en Battle Royale y Cero
-                                                construcción, disfruta de conciertos y eventos en directo o descubre
-                                                experiencias nuevas entre más de un millón de juegos diseñados por
-                                                creadores: carreras, parkour, supervivencia zombi y mucho más. Cada isla
-                                                de Fortnite tiene una clasificación por edad individual para que
-                                                encuentres el juego adecuado para ti y tus amigos. ¡Tienes todo un mundo
-                                                de entretenimiento por delante!</span>
+                                            <span class="letra "></span>
                                         </div>
                                         <div>
                                             <hr>
@@ -181,13 +209,11 @@
                                                         Generos
                                                     </p>
                                                     <p>
-                                                        Accion, disparos.
                                                     </p>
                                                 </div>
                                                 <div class="col-6 col_desarrollador_sm">
                                                     <p class="desarrollador">Requisitos</p>
                                                     <p>
-                                                        Tarjeta gráfica: Nvidia GTX 960.
                                                     </p>
                                                 </div>
                                             </div>
@@ -199,14 +225,13 @@
                                 </div>
                                 <div class="tamaño mt-md-5">
                                     <div class="centrar_fortnite">
-                                        <img src="../img/detail/24br-s24-egs-launcher-logo-350x100-350x100-b63249f937d9 (1).webp"
-                                            alt="logo Fortnite" class="tamaño_fortnite" id="logoJuego">
+                                        <img alt="logo Fortnite" class="tamaño_fortnite" id="logoJuego">
                                     </div>
                                     <div class="precio">
-                                        <span class="margen_precio">GRATIS</span>
+                                        <span class="margen_precio"></span>
                                     </div>
                                     <div class="contenedor_boton_comprar">
-                                        <a href="#" class=" btn btn-danger boton_comprar ">Comprar</a>
+                                        <a href="./404.html" class=" btn btn-danger boton_comprar ">Comprar</a>
                                     </div>
                                     <div>
                                         <a href="#" class="añadir_carrito btn boton1 w-100">Añadir al carrito</a>
@@ -217,12 +242,13 @@
                                     </div>
                                     <div class="centrar_desarrollador">
                                         <span class="desarrollador">Desarrollador:</sp>
-                                        <span class="nombre_desarrollador">Epic Games</span>
+                                            <span class="nombre_desarrollador"></span>
                                     </div>
                                     <div class="d-flex margen_final">
-                                        <div><a href="#" class="btn compartir"><i class="bi bi-share"></i>COMPARTIR</a>
+                                        <div><a href="./404.html" class="btn compartir"><i
+                                                    class="bi bi-share"></i>COMPARTIR</a>
                                         </div>
-                                        <div><a href="#" class="btn reportar"><i
+                                        <div><a href="./404.html" class="btn reportar"><i
                                                     class="bi bi-flag-fill bandera_roja"></i>REPORTAR</a></div>
                                     </div>
                                 </div>
@@ -305,37 +331,43 @@
         <div class="container-fluid colorFooter py-4 tamañoFooter">
             <div class=" row ">
                 <div class="col-12 pb-4  alineacion">
-                    <a href="index.html" class="ubicacionLogo">
+                    <a href="../index.html" class="ubicacionLogo">
                         <span>
                             <img src="../img/Rush (1)_preview_rev_1.png" alt="logo" class="footerLogo">
                         </span>
                     </a>
                     <div class="ubicacionLista">
                         <ul class="textoListaFooter inclinacionListaFooter ">
-                            <li class="inclinacionListaFooter"><a href="#" class="listaFooter">SEGURIDAD</a></li>
-                            <li class="inclinacionListaFooter"><a href="#" class="listaFooter"> TERMINOS LEGALES</a>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">SEGURIDAD</a>
                             </li>
-                            <li class="inclinacionListaFooter"><a href="#" class="listaFooter">AVISO DE PRIVACIDAD</a>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter"> TERMINOS
+                                    LEGALES</a>
                             </li>
-                            <li class="inclinacionListaFooter"><a href="#" class="listaFooter">TERMINOS DE SERVICIO</a>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">AVISO DE
+                                    PRIVACIDAD</a>
                             </li>
-                            <li class="inclinacionListaFooter"><a href="#" class="listaFooter">ACCESIBILIDAD</a></li>
-                            <li class="inclinacionListaFooter"><a href="#" class="listaFooter">ASISTENCIA AL JUGADOR</a>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">TERMINOS DE
+                                    SERVICIO</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html"
+                                    class="listaFooter">ACCESIBILIDAD</a></li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">ASISTENCIA AL
+                                    JUGADOR</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footerSocial ">
-                        <a href="#" class="footerIcons"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="footerIcons"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="footerIcons"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="footerIcons"><i class="bi bi-youtube"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-twitter-x"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-instagram"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-youtube"></i></a>
                     </div>
                 </div>
                 <hr class="hrFooter">
                 <div class="col-12 footer ">
                     <div class="columna1">
                         <div class="cookies">
-                            <a href="#" class="link colorLinksFooter">
+                            <a href="./404.html" class="link colorLinksFooter">
                                 Preferencias de cookies
                             </a>
                         </div>
