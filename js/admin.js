@@ -5,6 +5,8 @@ const formularioAdminJuegos = document.querySelector(
 const titulo = document.querySelector("#titulo");
 const precio = document.querySelector("#precio");
 const categoria = document.querySelector("#categoria");
+const imagenP = document.querySelector("#imagenP");
+const imagenL = document.querySelector("#imagenL");
 const imagenU = document.querySelector("#imagenU");
 const imagenD = document.querySelector("#imagenD");
 const imagenT = document.querySelector("#imagenT");
@@ -113,6 +115,8 @@ const crearJuego = (e) => {
   const validarTitulo = validarTexto(titulo.value, 2, 30, "titulo");
   const validarPre = validarPrecio(precio.value);
   const validarCat = validarCategoria(categoria.value);
+  const validarImgP = validarImagen(imagenP.value);
+  const validarImgL = validarImagen(imagenL.value);
   const validarImgU = validarImagen(imagenU.value);
   const validarImgD = validarImagen(imagenD.value);
   const validarImgT = validarImagen(imagenT.value);
@@ -124,6 +128,8 @@ const crearJuego = (e) => {
     validarTitulo &&
     validarPre &&
     validarCat &&
+    validarImgP &&
+    validarImgL &&
     validarImgU &&
     validarImgD &&
     validarImgT &&
@@ -138,6 +144,8 @@ const crearJuego = (e) => {
         titulo.value,
         precio.value,
         categoria.value,
+        imagenP.value,
+        imagenL.value,
         imagenU.value,
         imagenD.value,
         imagenT.value,
@@ -157,6 +165,8 @@ const crearJuego = (e) => {
         titulo.value,
         precio.value,
         categoria.value,
+        imagenP.value,
+        imagenL.value,
         imagenU.value,
         imagenD.value,
         imagenT.value,
