@@ -254,7 +254,7 @@ color: #8a8887;
   .columna2 {
     display: flex;
     justify-content: center;
-    margin-top: 17px;
+    margin-top: 25px;
   }
 }
 @media screen and (max-width: 768px) {
