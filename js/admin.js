@@ -55,7 +55,7 @@ const validarPrecio = (precio) => {
   return true;
 };
 const validarImagen = (imagen) => {
-  const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp)$/i.test(imagen);
+  const formatoImagenValido = /(http(s?):)([/|@|.|\w|\s|-])*\.((jpg|gif|png))/;
   if (!formatoImagenValido) {
     alert(
       "La URL no es válida. Debe ser una URL de imagen con una extensión válida (jpeg, jpg, gif, png, bmp, webp)."
