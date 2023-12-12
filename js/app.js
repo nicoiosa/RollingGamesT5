@@ -12,7 +12,7 @@ function dibujarJuego(juego) {
   <div class="myCard card mb-5 myGridCard" style="max-width: 540px;">
       <div class="row g-0">
           <div class="col-md-4">
-              <img src="./img/slenderPoster.avif" class="img-fluid rounded-start w-75"
+              <img src="${juego.imagenP}" class="img-fluid rounded-start w-75"
                   alt="Poster">
           </div>
           <div class="col-md-8 align-self-center">
