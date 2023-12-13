@@ -76,3 +76,14 @@ main {
     --bs-btn-border-radius: var(--bs-border-radius-lg);
   }
 }
+
+.divImgForm:hover .textoHover {
+  visibility: visible;
+  margin-top: 8px;
+  margin-left: 395px;
+}
+
+.espacioT {
+  color: rgba(34, 34, 34, 0.915);
+  background: rgba(34, 34, 34, 0.915);
+}

@@ -54,6 +54,7 @@ const validarPrecio = (precio) => {
   }
   return true;
 };
+/*
 const validarImagen = (imagen) => {
   const formatoImagenValido = /(http(s?):)([/|@|.|\w|\s|-])*\.((jpg|gif|png))/;
   if (!formatoImagenValido) {
@@ -64,6 +65,32 @@ const validarImagen = (imagen) => {
   }
   return true;
 };
+*/
+
+// Version alejo.
+const validarImagen = (url) => {
+  // Expresión regular para validar una URL
+  const formatoUrlValido = /^(https?:\/\/)/i.test(url);
+
+  if (!formatoUrlValido) {
+    alert(`
+    La URL no es válida.
+    Debe comenzar con "https://" o "http://".
+    `);
+    return false;
+  } 
+
+  // Expresión regular para validar una URL de imagen
+  const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp|avif)$/i.test(url);
+
+  if (!formatoImagenValido) {
+    alert('La URL no es válida. Debe ser una URL de imagen con una extensión válida (jpeg, jpg, gif, png, bmp, webp, avif).');
+    return false;
+  }
+
+  return true;
+};
+
 const validarCategoria = (categoria) => {
   if (
     categoria === "RPG" ||
