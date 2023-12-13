@@ -1,0 +1,29 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.cuerpoLista {
+  background-color: #121212;
+}
+
+.titulo {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+}
+
+.btnCuadrado {
+  border-radius: 0;
+  transform: skewX(-9deg);
+  color: #eee;
+  background: #cc0e0e;
+  font-family: "Dhurjati", sans-serif;
+}
+
+.btnCuadrado:hover {
+  background: rgba(255, 60, 0, 0.235);
+}
+
+.linkEliminar {
+    color: #eee;
+    font-style: italic;
+}
