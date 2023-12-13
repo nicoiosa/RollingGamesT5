@@ -40,17 +40,19 @@
                     </div>
                     <ul class="navbar-nav">
                         <li class="me-4 margen_admin d-lg-none">
-                            <a class="nav-link" aria-current="page" href="#">CARRITO</a>
+                            <a class="nav-link" href="#">CARRITO</a>
                         </li>
                         <li class="me-4 margen_icono d-lg-none">
                             <a class="nav-link" href="#">LISTA DE DESEADOS</a>
                         </li>
-                        <li class="me-4 margen_admin">
+                        <li class="me-4 margen_admin d-none" id="liAdmin">
                             <a class="nav-link " href="./admin.html">ADMIN</a>
                         </li>
-                        <li class="me-4  margen_icono">
-                            <button class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal"><i
-                                    class="bi bi-person-fill"></i></button>
+                        <li class="me-4 margen_icono" id="liLogIn">
+                            <button class="nav-link" id="btnOpenLogin"><i class="bi bi-person-fill"></i></button>
+                        </li>
+                        <li class="me-4 margen_icono d-none" id="liLogOut">
+                            <button class="nav-link" id="btnLogOut"><i class="bi bi-box-arrow-in-right"></i></button>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-md-center">
@@ -73,7 +75,7 @@
                 </div>
             </form>
             <div class="d-flex gap-5">
-                <a class="nav-link hover_nav_link" aria-current="page" href="#">CARRITO</a>
+                <a class="nav-link hover_nav_link" href="#">CARRITO</a>
                 <a class="nav-link hover_nav_link" href="#">LISTA DE DESEADOS</a>
             </div>
         </div>
@@ -83,10 +85,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title fs-5" id="loginleModalLabel">Iniciar sesion</h3>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" id="btnCloseLogin" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="loginForm">
                         <div class="mb-3">
                             <label for="loginEmail1" class="form-label">Email</label>
                             <input type="email" class="form-control" id="loginEmail1" aria-describedby="emailHelp"
@@ -104,7 +106,6 @@
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <main>
         <section>
@@ -399,6 +400,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="../js/detail.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

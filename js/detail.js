@@ -2,7 +2,6 @@ const url = new URLSearchParams(window.location.search),
   codigoJuego = url.get("codigo"),
   listaJuegos = JSON.parse(localStorage.getItem("listaJuegosKey")),
   juego = listaJuegos.find((juego) => juego.codigo === codigoJuego);
-console.log(juego);
 
 const titulo = document.getElementsByTagName("h2")[0],
   precio = document.getElementsByClassName("margen_precio")[0],

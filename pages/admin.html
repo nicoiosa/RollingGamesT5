@@ -1,414 +1,281 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Rolling Team 5 - Facundo Alejo Herrera" />
-    <meta name="keywords" content="tienda, videojuegos, gratis, descuentos" />
-    <meta
-      name="description"
-      content="Mejor tienda de videojuegos en el mercado ¡Compra tus juegos aqui!"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/admin.css" />
-    <script
-      src="https://kit.fontawesome.com/5c9d8505e5.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Pixel Games</title>
-  </head>
 
-  <body class="bg-dark">
-    <header>
-      <nav
-        class="navbar navbar-expand-lg colorNav navbar-dark px-lg-1"
-        id="ancla_inicio"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand p-0" href="../index.html"
-            ><img
-              src="../img/Rush (1)_preview_rev_1.png"
-              alt="logo"
-              class="logo"
-            />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse text-md-center" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="pe-3 margen_tienda">
-                <a class="nav-link" href="../index.html">TIENDA</a>
-              </li>
-              <li class="nav-item margen_sobreNosotros">
-                <a class="nav-link" href="./aboutUs.html">SOBRE NOSOTROS</a>
-              </li>
-            </ul>
-            <div class="ms-auto me-5"></div>
-            <ul class="navbar-nav">
-              <li class="me-4 margen_admin">
-                <a
-                  class="nav-link active"
-                  href="./admin.html"
-                  aria-current="page"
-                  >ADMIN</a
-                >
-              </li>
-            </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Rolling Team 5 - Facundo Alejo Herrera" />
+  <meta name="keywords" content="tienda, videojuegos, gratis, descuentos" />
+  <meta name="description" content="Mejor tienda de videojuegos en el mercado ¡Compra tus juegos aqui!" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+  <script src="https://kit.fontawesome.com/5c9d8505e5.js" crossorigin="anonymous"></script>
+  <title>Pixel Games</title>
+</head>
+
+<body class="bg-dark">
+  <header>
+    <nav class="navbar navbar-expand-lg colorNav navbar-dark px-lg-1" id="ancla_inicio">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0" href="../index.html"><img src="../img/Rush (1)_preview_rev_1.png" alt="logo"
+            class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-md-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="pe-3 margen_tienda">
+              <a class="nav-link" href="../index.html">TIENDA</a>
+            </li>
+            <li class="nav-item margen_sobreNosotros">
+              <a class="nav-link" href="./aboutUs.html">SOBRE NOSOTROS</a>
+            </li>
+          </ul>
+          <div class="ms-auto me-5">
           </div>
+          <ul class="navbar-nav">
+            <li class="me-4 margen_admin d-none" id="liAdmin">
+              <a class="nav-link active" aria-current="page" href="./admin.html">ADMIN</a>
+            </li>
+            <li class="me-4 margen_icono d-none" id="liLogIn">
+              <button class="nav-link" id="btnOpenLogin"><i class="bi bi-person-fill"></i></button>
+            </li>
+            <li class="me-4 margen_icono" id="liLogOut">
+              <button class="nav-link" id="btnLogOut"><i class="bi bi-box-arrow-in-right"></i></button>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-    <main class="py-5">
-      <section class="container text-light">
-        <article class="row mb-3">
-          <div class="text-center col-md-6 py-1 ps-lg-5 mb-1 mb-md-0">
-            <h2 class="italica tituloAdministrador display-4">VIDEOJUEGOS</h2>
-          </div>
-          <div
-            class="col-md-5 col-lg-6 text-center text-md-end text-lg-center py-2 py-lg-3 mb-1 mb-md-0"
-          >
-            <button
-              class="btn px-4 py-lg-1 btnCuadrado border border-3 border-secondary"
-              id="btnAgregar"
-            >
-              AGREGAR
-            </button>
-          </div>
-        </article>
-        <article class="table-responsive text-center p-1">
-          <table class="table table-dark table-striped">
-            <thead>
-              <tr>
-                <th scope="col">
-                  <span class="colorTextoSecundario italica">ID</span>
-                </th>
-                <th scope="col" class="text-start ps-3 ps-md-5">
-                  <span class="colorTextoSecundario italica ps-3">Titulo</span>
-                </th>
-                <th scope="col" class="px-5">
-                  <span class="colorTextoSecundario italica">Descripción</span>
-                </th>
-                <th scope="col" class="text-end pe-3">
-                  <span class="colorTextoSecundario italica">Precio</span>
-                </th>
-                <th scope="col" class="text-end pe-4">
-                  <span class="colorTextoSecundario italica pe-3"
-                    >Acciones</span
-                  >
-                </th>
-              </tr>
-            </thead>
-            <tbody class="border border-4 border-secondary"></tbody>
-          </table>
-        </article>
-      </section>
-    </main>
-    <div
-      class="modal fade"
-      id="modalJuego"
-      tabindex="-1"
-      aria-labelledby="modalJuegoLabel"
-      aria-hidden="true"
-    >
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header text-bg-dark">
-            <h2
-              class="modal-title fs-5 italica tituloAdministrador"
-              id="modalJuegoLabel"
-            >
-              Ingresar Datos del Videojuego
-            </h2>
-            <button
-              type="button"
-              class="btn-close"
-              id="btnCerrar"
-              aria-label="Close"
-            ></button>
+          <div class="modal-header">
+            <h3 class="modal-title fs-5" id="loginleModalLabel">Iniciar sesion</h3>
+            <button type="button" class="btn-close" id="btnCloseLogin" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="formularioAdministrarJuegos">
+            <form id="loginForm">
               <div class="mb-3">
-                <label for="titulo" class="form-label italica">Titulo</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="titulo"
-                  aria-describedby="titulo"
-                  minlength="2"
-                  maxlength="30"
-                  required
-                  placeholder="Ej: Fortnite."
-                />
+                <label for="loginEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginEmail1" aria-describedby="emailHelp"
+                  placeholder="ejemplo@pixelgames.com">
               </div>
               <div class="mb-3">
-                <label for="precio" class="form-label italica">Precio</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="precio"
-                  aria-describedby="precio"
-                  minlength="2"
-                  maxlength="50"
-                  required
-                  placeholder="Ej: 'Gratis' o '1 UD$'"
-                />
+                <label for="loginPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control focus-ring-danger" id="loginPassword" placeholder="✱✱✱✱✱✱">
               </div>
-              <div class="mb-3">
-                <label for="categoria" class="form-label">Categoria</label>
-                <select id="categoria" class="form-control" required>
-                  <option value="">Seleccione una opción</option>
-                  <option value="RPG">RPG</option>
-                  <option value="FPS">FPS</option>
-                  <option value="Accion">Accion</option>
-                  <option value="Estrategia">Estrategia</option>
-                  <option value="Carreras">Carreras</option>
-                  <option value="Horror">Horror</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="imagen" class="form-label">URL de Imagenes</label>
-                <div class="divImgForm">
-                  <p class="textoHover"><b class="espacioT">...</b>Portada</p>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    id="imagenP"
-                    aria-describedby="imagenP"
-                    minlength="13"
-                    maxlength="200"
-                    required
-                    placeholder="https://imagenPortada.jpg"
-                  />                  
-                </div>
-                <div class="divImgForm">
-                  <p class="textoHover"><b class="espacioT">.......</b>Logo</p>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    id="imagenL"
-                    aria-describedby="imagenL"
-                    minlength="13"
-                    maxlength="200"
-                    required
-                    placeholder="https://imagenLogo.jpg"
-                  />
-                </div>
-                <div class="divImgForm">
-                  <p class="textoHover">Carrusel 1</p>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    id="imagenU"
-                    aria-describedby="imagenU"
-                    minlength="13"
-                    maxlength="200"
-                    required
-                    placeholder="https://imagenCarrusel1.jpg"
-                  />
-                </div>
-                <div class="divImgForm">
-                  <p class="textoHover">Carrusel 2</p>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    id="imagenD"
-                    aria-describedby="imagenD"
-                    minlength="13"
-                    maxlength="200"
-                    required
-                    placeholder="https://imagenCarrusel2.jpg"
-                  />
-                </div>
-                <div class="divImgForm">
-                  <p class="textoHover">Carrusel 3</p>
-                  <input
-                    type="text"
-                    class="form-control mb-1"
-                    id="imagenT"
-                    aria-describedby="imagenT"
-                    minlength="13"
-                    maxlength="200"
-                    required
-                    placeholder="https://imagenCarrusel3.jpg"
-                  />
-                </div>
-                <div class="divImgForm">
-                  <p class="textoHover">Carrusel 4</p>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="imagenC"
-                    aria-describedby="imagenC"
-                    minlength="13"
-                    maxlength="200"
-                    required
-                    placeholder="https://imagenCarrusel4.jpg"
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="descripcion" class="form-label italica"
-                  >Descripción</label
-                >
-                <textarea
-                  id="descripcion"
-                  rows="4"
-                  class="form-control"
-                  minlength="5"
-                  maxlength="500"
-                  required
-                  placeholder="Ej: Es un juego de armas."
-                ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="requisitos" class="form-label italica"
-                  >Requisitos del Sistema</label
-                >
-                <textarea
-                  id="requisitos"
-                  rows="4"
-                  class="form-control"
-                  minlength="5"
-                  maxlength="200"
-                  placeholder="Ej: 4gb RAM. Procesador i5 o superior. Etc."
-                  required
-                ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="desarrollador" class="form-label italica"
-                  >Desarrollador</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="desarrollador"
-                  aria-describedby="desarrollador"
-                  minlength="2"
-                  maxlength="30"
-                  required
-                  placeholder="Ej: Epic Games."
-                />
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btnCuadrado">Enviar</button>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-lg myBtn">Iniciar</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <footer class="">
-      <div class="container-fluid colorFooter py-4 tamañoFooter">
-        <div class="row">
-          <div class="col-12 pb-4 alineacion">
-            <a href="../index.html" class="ubicacionLogo">
-              <span>
-                <img
-                  src="../img/Rush (1)_preview_rev_1.png"
-                  alt="logo"
-                  class="footerLogo"
-                />
-              </span>
-            </a>
-            <div class="ubicacionLista">
-              <ul class="textoListaFooter inclinacionListaFooter">
-                <li class="inclinacionListaFooter">
-                  <a href="./404.html" class="listaFooter">SEGURIDAD</a>
-                </li>
-                <li class="inclinacionListaFooter">
-                  <a href="./404.html" class="listaFooter"> TERMINOS LEGALES</a>
-                </li>
-                <li class="inclinacionListaFooter">
-                  <a href="./404.html" class="listaFooter"
-                    >AVISO DE PRIVACIDAD</a
-                  >
-                </li>
-                <li class="inclinacionListaFooter">
-                  <a href="./404.html" class="listaFooter"
-                    >TERMINOS DE SERVICIO</a
-                  >
-                </li>
-                <li class="inclinacionListaFooter">
-                  <a href="./404.html" class="listaFooter">ACCESIBILIDAD</a>
-                </li>
-                <li class="inclinacionListaFooter">
-                  <a href="./404.html" class="listaFooter"
-                    >ASISTENCIA AL JUGADOR</a
-                  >
-                </li>
-              </ul>
+    <section class="container text-light">
+      <article class="row mb-3">
+        <div class="text-center col-md-6 py-1 ps-lg-5 mb-1 mb-md-0">
+          <h2 class="italica tituloAdministrador display-4">VIDEOJUEGOS</h2>
+        </div>
+        <div class="col-md-5 col-lg-6 text-center text-md-end text-lg-center py-2 py-lg-3 mb-1 mb-md-0">
+          <button class="btn px-4 py-lg-1 btnCuadrado border border-3 border-secondary" id="btnAgregar">
+            AGREGAR
+          </button>
+        </div>
+      </article>
+      <article class="table-responsive text-center p-1">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">
+                <span class="colorTextoSecundario italica">ID</span>
+              </th>
+              <th scope="col" class="text-start ps-3 ps-md-5">
+                <span class="colorTextoSecundario italica ps-3">Titulo</span>
+              </th>
+              <th scope="col" class="px-5">
+                <span class="colorTextoSecundario italica">Descripción</span>
+              </th>
+              <th scope="col" class="text-end pe-3">
+                <span class="colorTextoSecundario italica">Precio</span>
+              </th>
+              <th scope="col" class="text-end pe-4">
+                <span class="colorTextoSecundario italica pe-3">Acciones</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="border border-4 border-secondary"></tbody>
+        </table>
+      </article>
+    </section>
+  </main>
+  <div class="modal fade" id="modalJuego" tabindex="-1" aria-labelledby="modalJuegoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-bg-dark">
+          <h2 class="modal-title fs-5 italica tituloAdministrador" id="modalJuegoLabel">
+            Ingresar Datos del Videojuego
+          </h2>
+          <button type="button" class="btn-close" id="btnCerrar" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formularioAdministrarJuegos">
+            <div class="mb-3">
+              <label for="titulo" class="form-label italica">Titulo</label>
+              <input type="text" class="form-control" id="titulo" aria-describedby="titulo" minlength="2" maxlength="30"
+                required placeholder="Ej: Fortnite." />
             </div>
-            <div class="footerSocial">
-              <a href="./404.html" class="footerIcons"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="./404.html" class="footerIcons"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-              <a href="./404.html" class="footerIcons"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a href="./404.html" class="footerIcons"
-                ><i class="bi bi-youtube"></i
-              ></a>
+            <div class="mb-3">
+              <label for="precio" class="form-label italica">Precio</label>
+              <input type="text" class="form-control" id="precio" aria-describedby="precio" minlength="2" maxlength="50"
+                required placeholder="Ej: 'Gratis' o '1 UD$'" />
             </div>
+            <div class="mb-3">
+              <label for="categoria" class="form-label">Categoria</label>
+              <select id="categoria" class="form-control" required>
+                <option value="">Seleccione una opción</option>
+                <option value="RPG">RPG</option>
+                <option value="FPS">FPS</option>
+                <option value="Accion">Accion</option>
+                <option value="Estrategia">Estrategia</option>
+                <option value="Carreras">Carreras</option>
+                <option value="Horror">Horror</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="imagen" class="form-label">URL de Imagenes</label>
+              <div class="divImgForm">
+                <p class="textoHover"><b class="espacioT">...</b>Portada</p>
+                <input type="text" class="form-control mb-1" id="imagenP" aria-describedby="imagenP" minlength="13"
+                  maxlength="200" required placeholder="https://imagenPortada.jpg" />
+              </div>
+              <div class="divImgForm">
+                <p class="textoHover"><b class="espacioT">.......</b>Logo</p>
+                <input type="text" class="form-control mb-1" id="imagenL" aria-describedby="imagenL" minlength="13"
+                  maxlength="200" required placeholder="https://imagenLogo.jpg" />
+              </div>
+              <div class="divImgForm">
+                <p class="textoHover">Carrusel 1</p>
+                <input type="text" class="form-control mb-1" id="imagenU" aria-describedby="imagenU" minlength="13"
+                  maxlength="200" required placeholder="https://imagenCarrusel1.jpg" />
+              </div>
+              <div class="divImgForm">
+                <p class="textoHover">Carrusel 2</p>
+                <input type="text" class="form-control mb-1" id="imagenD" aria-describedby="imagenD" minlength="13"
+                  maxlength="200" required placeholder="https://imagenCarrusel2.jpg" />
+              </div>
+              <div class="divImgForm">
+                <p class="textoHover">Carrusel 3</p>
+                <input type="text" class="form-control mb-1" id="imagenT" aria-describedby="imagenT" minlength="13"
+                  maxlength="200" required placeholder="https://imagenCarrusel3.jpg" />
+              </div>
+              <div class="divImgForm">
+                <p class="textoHover">Carrusel 4</p>
+                <input type="text" class="form-control" id="imagenC" aria-describedby="imagenC" minlength="13"
+                  maxlength="200" required placeholder="https://imagenCarrusel4.jpg" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="descripcion" class="form-label italica">Descripción</label>
+              <textarea id="descripcion" rows="4" class="form-control" minlength="5" maxlength="500" required
+                placeholder="Ej: Es un juego de armas."></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="requisitos" class="form-label italica">Requisitos del Sistema</label>
+              <textarea id="requisitos" rows="4" class="form-control" minlength="5" maxlength="200"
+                placeholder="Ej: 4gb RAM. Procesador i5 o superior. Etc." required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="desarrollador" class="form-label italica">Desarrollador</label>
+              <input type="text" class="form-control" id="desarrollador" aria-describedby="desarrollador" minlength="2"
+                maxlength="30" required placeholder="Ej: Epic Games." />
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btnCuadrado">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="">
+    <div class="container-fluid colorFooter py-4 tamañoFooter">
+      <div class="row">
+        <div class="col-12 pb-4 alineacion">
+          <a href="../index.html" class="ubicacionLogo">
+            <span>
+              <img src="../img/Rush (1)_preview_rev_1.png" alt="logo" class="footerLogo" />
+            </span>
+          </a>
+          <div class="ubicacionLista">
+            <ul class="textoListaFooter inclinacionListaFooter">
+              <li class="inclinacionListaFooter">
+                <a href="./404.html" class="listaFooter">SEGURIDAD</a>
+              </li>
+              <li class="inclinacionListaFooter">
+                <a href="./404.html" class="listaFooter"> TERMINOS LEGALES</a>
+              </li>
+              <li class="inclinacionListaFooter">
+                <a href="./404.html" class="listaFooter">AVISO DE PRIVACIDAD</a>
+              </li>
+              <li class="inclinacionListaFooter">
+                <a href="./404.html" class="listaFooter">TERMINOS DE SERVICIO</a>
+              </li>
+              <li class="inclinacionListaFooter">
+                <a href="./404.html" class="listaFooter">ACCESIBILIDAD</a>
+              </li>
+              <li class="inclinacionListaFooter">
+                <a href="./404.html" class="listaFooter">ASISTENCIA AL JUGADOR</a>
+              </li>
+            </ul>
           </div>
-          <hr class="hrFooter" />
-          <div class="col-12 footer">
-            <div class="columna1">
-              <div class="cookies">
-                <a href="./404.html" class="link colorLinksFooter">
-                  Preferencias de cookies
-                </a>
-              </div>
-              <div class="derechos">
-                <small class="colorTextoFooter">
-                  <span class="ms-1 desaparece"> | </span>
-                  © 2023 Pixel Games, Inc. Todos los derechos reservados.
-                </small>
-              </div>
-            </div>
-            <div class="ms-auto me-2 columna2">
-              <a href="#ancla_inicio" class="ps-auto IrINICIO"
-                >ir al inicio
-                <i class="bi bi-caret-up-fill"></i>
+          <div class="footerSocial">
+            <a href="./404.html" class="footerIcons"><i class="bi bi-facebook"></i></a>
+            <a href="./404.html" class="footerIcons"><i class="bi bi-twitter-x"></i></a>
+            <a href="./404.html" class="footerIcons"><i class="bi bi-instagram"></i></a>
+            <a href="./404.html" class="footerIcons"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <hr class="hrFooter" />
+        <div class="col-12 footer">
+          <div class="columna1">
+            <div class="cookies">
+              <a href="./404.html" class="link colorLinksFooter">
+                Preferencias de cookies
               </a>
             </div>
+            <div class="derechos">
+              <small class="colorTextoFooter">
+                <span class="ms-1 desaparece"> | </span>
+                © 2023 Pixel Games, Inc. Todos los derechos reservados.
+              </small>
+            </div>
+          </div>
+          <div class="ms-auto me-2 columna2">
+            <a href="#ancla_inicio" class="ps-auto IrINICIO">ir al inicio
+              <i class="bi bi-caret-up-fill"></i>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/admin.js" type="module"></script>
-  </body>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/admin.js" type="module"></script>
+  <script src="../js/login.js"></script>
+</body>
+
 </html>
