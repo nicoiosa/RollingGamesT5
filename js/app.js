@@ -5,6 +5,7 @@ if (listaJuegos) {
     dibujarJuego(juego);
   });
 }
+
 function dibujarJuego(juego) {
   const nodoPadre = document.getElementById(juego.categoria);
   nodoPadre.innerHTML += `
@@ -33,4 +34,5 @@ function borrarPadresVacios() {
     }
   });
 }
+
 borrarPadresVacios()

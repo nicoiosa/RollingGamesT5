@@ -6,7 +6,8 @@ const loginForm = document.getElementById("loginForm"),
   liLogIn = document.getElementById("liLogIn"),
   liAdmin = document.getElementById("liAdmin"),
   btnLogOut = document.getElementById("btnLogOut");
-let paginaActual = window.location.pathname;
+let paginaActual = window.location.pathname,
+  estadoActual = JSON.parse(sessionStorage.getItem("estadoActualKey")) || false;
 
 const baseDatosUsuario = {
   "nicoiosa@admin.com": "maxverstappen",
@@ -28,6 +29,8 @@ function login(e) {
   if (baseDatosUsuario.hasOwnProperty(email)) {
     if (contraseña === baseDatosUsuario[email]) {
       alert("¡Inicio de sesion exitoso!");
+      estadoActual = true;
+      guardarEnSessionStorage();
       cerrarLogin();
       actualizarEstado();
     } else {
@@ -40,6 +43,8 @@ function login(e) {
 function logOut() {
   alert;
   ("¡Cierre de sesion exitoso!");
+  estadoActual = false;
+  guardarEnSessionStorage();
   if (
     paginaActual === "/pages/detail.html" ||
     paginaActual === "/pages/aboutUs.html"
@@ -50,12 +55,22 @@ function logOut() {
   }
 }
 function actualizarEstado() {
-  liLogIn.className = "me-4 margen_icono d-none";
-  liLogOut.className = "me-4 margen_icono";
-  liAdmin.className = "me-4 margen_icono";
+  if (estadoActual) {
+    liLogIn.className = "me-4 margen_icono d-none";
+    liLogOut.className = "me-4 margen_icono";
+    liAdmin.className = "me-4 margen_icono";
+  } else {
+    liLogIn.className = "me-4 margen_icono";
+    liLogOut.className = "me-4 margen_icono d-none";
+    liAdmin.className = "me-4 margen_icono d-none";
+  }
+}
+function guardarEnSessionStorage() {
+  sessionStorage.setItem("estadoActualKey", JSON.stringify(estadoActual));
 }
 
 loginForm.addEventListener("submit", login);
 btnOpenLogin.addEventListener("click", abrirLogin);
 btnCloseLogin.addEventListener("click", cerrarLogin);
 btnLogOut.addEventListener("click", logOut);
+actualizarEstado();
