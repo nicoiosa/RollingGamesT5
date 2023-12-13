@@ -54,27 +54,16 @@ const validarPrecio = (precio) => {
   }
   return true;
 };
-/*
-const validarImagen = (imagen) => {
-  const formatoImagenValido = /(http(s?):)([/|@|.|\w|\s|-])*\.((jpg|gif|png))/;
-  if (!formatoImagenValido) {
-    alert(
-      "La URL no es válida. Debe ser una URL de imagen con una extensión válida (jpeg, jpg, gif, png, bmp, webp)."
-    );
-    return false;
-  }
-  return true;
-};
-*/
-
-// Version alejo.
-const validarImagen = (url) => {
+const validarImagen = (url,nombre) => {
   // Expresión regular para validar una URL
   const formatoUrlValido = /^(https?:\/\/)/i.test(url);
 
   if (!formatoUrlValido) {
     alert(`
-    La URL no es válida.
+    Campo de "URL de Imagen" NO ACEPTADO
+
+
+    La URL de "${nombre}" no es válida.
     Debe comenzar con "https://" o "http://".
     `);
     return false;
@@ -84,13 +73,20 @@ const validarImagen = (url) => {
   const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp|avif)$/i.test(url);
 
   if (!formatoImagenValido) {
-    alert('La URL no es válida. Debe ser una URL de imagen con una extensión válida (jpeg, jpg, gif, png, bmp, webp, avif).');
+    alert(`
+    Campo de "URL de Imagen" NO ACEPTADO
+
+
+    La URL de "${nombre}" no es válida.
+    Debe ser una URL de imagen con una extensión válida.
+
+    Ejemplo: jpeg, jpg, gif, png, bmp, webp, avif.
+    `);
     return false;
   }
 
   return true;
 };
-
 const validarCategoria = (categoria) => {
   if (
     categoria === "RPG" ||
@@ -142,12 +138,12 @@ const crearJuego = (e) => {
   const validarTitulo = validarTexto(titulo.value, 2, 30, "titulo");
   const validarPre = validarPrecio(precio.value);
   const validarCat = validarCategoria(categoria.value);
-  const validarImgP = validarImagen(imagenP.value);
-  const validarImgL = validarImagen(imagenL.value);
-  const validarImgU = validarImagen(imagenU.value);
-  const validarImgD = validarImagen(imagenD.value);
-  const validarImgT = validarImagen(imagenT.value);
-  const validarImgC = validarImagen(imagenC.value);
+  const validarImgP = validarImagen(imagenP.value,"Portada");
+  const validarImgL = validarImagen(imagenL.value,"Logo");
+  const validarImgU = validarImagen(imagenU.value,"Carrusel 1");
+  const validarImgD = validarImagen(imagenD.value,"Carrusel 2");
+  const validarImgT = validarImagen(imagenT.value,"Carrusel 3");
+  const validarImgC = validarImagen(imagenC.value,"Carrusel 4");
   const validarDesc = validarTexto(descripcion.value, 5, 500, "descripcion");
   const validarReq = validarTexto(requisitos.value, 5, 200, "requisitos");
   const validarDev = validarTexto(desarrollador.value, 2, 30, "desarrollador");

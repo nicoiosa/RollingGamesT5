@@ -42,7 +42,7 @@ main {
 
 .textoHover {
   visibility: hidden;
-  position: fixed;
+  position: absolute;
   background: rgba(34, 34, 34, 0.915);
   font-style: normal;
 }
@@ -81,9 +81,11 @@ main {
   visibility: visible;
   margin-top: 8px;
   margin-left: 395px;
+  color: #eee;
+  background: #cc0e0e;
 }
 
 .espacioT {
-  color: rgba(34, 34, 34, 0.915);
-  background: rgba(34, 34, 34, 0.915);
+  color:#cc0e0e;
+  background: #cc0e0e;
 }
