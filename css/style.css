@@ -260,7 +260,12 @@ nav {
   .marginNav {
     margin-left: 0px;
   }
+  .margen_icono {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
 
+  }
   .margen_icono {
     margin-left: 0px;
     display: flex;
