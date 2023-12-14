@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Rolling Team 5">
+    <meta name="keywords" content="tienda, videojuegos, gratis, descuentos">
+    <meta name="description" content="Mejor tienda de videojuegos en el mercado ¡Compra tus juegos aqui!">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="..//css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Pixel Games</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg colorNav navbar-dark px-lg-1" id="ancla_inicio">
+            <div class="container-fluid">
+                <a class="navbar-brand p-0" href="../index.html"><img src="../img/Rush (1)_preview_rev_1.png" alt="logo"
+                        class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-md-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="pe-3 margen_tienda">
+                            <a class="nav-link" href="../index.html">TIENDA</a>
+                        </li>
+                        <li class="nav-item margen_sobreNosotros">
+                            <a class="nav-link" href="./aboutUs.html">SOBRE NOSOTROS</a>
+                        </li>
+                    </ul>
+                    <div class="ms-auto me-5">
+                    </div>
+                    <ul class="navbar-nav">
+                        <li class="me-4 margen_admin d-lg-none">
+                            <a class="nav-link" href="./cart.html">CARRITO</a>
+                        </li>
+                        <li class="me-4 margen_icono d-lg-none">
+                            <a class="nav-link" href="./wishList.html">LISTA DE DESEADOS</a>
+                        </li>
+                        <li class="me-4 margen_admin d-none" id="liAdmin">
+                            <a class="nav-link " href="./admin.html">ADMIN</a>
+                        </li>
+                        <li class="me-4 margen_icono" id="liLogIn">
+                            <button class="nav-link" id="btnOpenLogin"><i class="bi bi-person-fill"></i></button>
+                        </li>
+                        <li class="me-4 margen_icono d-none" id="liLogOut">
+                            <button class="nav-link" id="btnLogOut"><i class="bi bi-box-arrow-in-right"></i></button>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-md-center d-lg-none">
+                        <div class="search-container">
+                            <input type="text" id="busquedaInput2" class="mySearch py-2 ps-3 rounded-5"
+                                placeholder="Search...">
+                            <ul id="busquedaResultado2" class="dropdown-menu rounded-4"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <nav class="py-3 navbar sticky-top secondNav d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex flex-column">
+                <div class="search-container">
+                    <input type="text" id="busquedaInput" class="mySearch py-2 ps-3 rounded-5" placeholder="Search...">
+                    <ul id="busquedaResultado" class="dropdown-menu rounded-4"></ul>
+                </div>
+            </div>
+            <div class="d-flex gap-5">
+                <a class="nav-link hover_nav_link" href="./cart.html">CARRITO</a>
+                <a class="nav-link hover_nav_link" href="./wishList.html">LISTA DE DESEADOS</a>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title fs-5" id="loginleModalLabel">Iniciar sesion</h3>
+                    <button type="button" class="btn-close" id="btnCloseLogin" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail1" aria-describedby="emailHelp"
+                                placeholder="ejemplo@pixelgames.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control focus-ring-danger" id="loginPassword"
+                                placeholder="✱✱✱✱✱✱">
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn btn-lg myBtn">Iniciar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section>
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="">
+                        <div class="contenedor_contenido">
+                            <div class="margen_titulo">
+                                <h2>
+                                    <span class="letra_titulo"></span>
+                                </h2>
+                            </div>
+                            <div class="d-flex ">
+                                <div class="d-flex">
+                                    <div class="calificacion">
+                                        <span id="calificacion"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margen_resumen">
+                            </div>
+                            <div class=" juego">
+                                <div class="row d-flex flex-lg-column prueba">
+                                    <div id="carouselBanner" class="carousel slide  carrousel_tamaño"
+                                        data-bs-ride="carousel">
+                                        <div class=" prueba2">
+                                            <div class="carousel-inner d-flex">
+                                                <div class="carousel-item active">
+                                                    <div class="card text-bg-dark border-0">
+                                                        <img class="card-img" alt="Banner">
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="card text-bg-dark border-0">
+                                                        <img class="card-img" alt="Banner">
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="card text-bg-dark border-0">
+                                                        <img class="card-img" alt="Banner">
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="card text-bg-dark border-0">
+                                                        <img class="card-img" alt="Banner">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button"
+                                                    data-bs-target="#carouselBanner" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button"
+                                                    data-bs-target="#carouselBanner" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class=" d-flex justify-content-center margen_cards_carrousel"
+                                            id="bannerBtnsFather">
+                                            <div class="display_cards_carousel_1 d-flex">
+                                                <button
+                                                    class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
+                                                    data-bs-target="#carouselBanner" data-bs-slide-to="0"
+                                                    aria-current="true" aria-label="Slide 1">
+                                                    <img class="  tamaño_imagen_carrousel" alt="Poster">
+                                                </button>
+                                                <button
+                                                    class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
+                                                    data-bs-target="#carouselBanner" data-bs-slide-to="1"
+                                                    aria-label="Slide 2">
+                                                    <img class="tamaño_imagen_carrousel rounded-2" alt="Poster">
+                                                </button>
+                                            </div>
+                                            <div class="display_cards_carousel_2 d-flex">
+                                                <button
+                                                    class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
+                                                    data-bs-target="#carouselBanner" data-bs-slide-to="2"
+                                                    aria-label="Slide 3">
+                                                    <img class="tamaño_imagen_carrousel rounded-2" alt="Poster">
+                                                </button>
+                                                <button
+                                                    class="btn rounded-4 myBannerBtn d-flex justify-content-start gap-4 align-items-center carrousel_gris"
+                                                    data-bs-target="#carouselBanner" data-bs-slide-to="3"
+                                                    aria-label="Slide 4">
+                                                    <img class="tamaño_imagen_carrousel rounded-2" alt="Poster">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class=" margen_descripcion_juego">
+                                            <span class="letra "></span>
+                                        </div>
+                                        <div>
+                                            <hr>
+                                        </div>
+                                        <div class="container-fluid margen_contenedor_requisitos">
+                                            <div class="row">
+                                                <div class="col-6 col_generos_sm">
+                                                    <p class="desarrollador">
+                                                        Generos
+                                                    </p>
+                                                    <p>
+                                                    </p>
+                                                </div>
+                                                <div class="col-6 col_desarrollador_sm">
+                                                    <p class="desarrollador">Requisitos</p>
+                                                    <p>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div class="tamaño mt-md-5">
+                                    <div class="centrar_fortnite">
+                                        <img alt="logo Fortnite" class="tamaño_fortnite" id="logoJuego">
+                                    </div>
+                                    <div class="precio">
+                                        <span class="margen_precio"></span>
+                                    </div>
+                                    <div class="contenedor_boton_comprar">
+                                        <a href="./404.html" class=" btn btn-danger boton_comprar ">Comprar</a>
+                                    </div>
+                                    <div>
+                                        <button href="#" class="añadir_carrito btn boton1 w-100"
+                                            id="btnAgregarCarro">Añadir al carrito</button>
+                                    </div>
+                                    <div>
+                                        <button href="#" class="añadir_carrito btn boton2 w-100" id="btnAgregarLista">
+                                            <i class="bi bi-plus-circle"></i>Lista de deseados</button>
+                                    </div>
+                                    <div class="centrar_desarrollador">
+                                        <span class="desarrollador">Desarrollador:</sp>
+                                            <span class="nombre_desarrollador"></span>
+                                    </div>
+                                    <div class="d-flex margen_final">
+                                        <div><a href="./404.html" class="btn compartir"><i
+                                                    class="bi bi-share"></i>COMPARTIR</a>
+                                        </div>
+                                        <div><a href="./404.html" class="btn reportar"><i
+                                                    class="bi bi-flag-fill bandera_roja"></i>REPORTAR</a></div>
+                                    </div>
+                                    <div class="row justify-content-center mt-5">
+                                        <div class="card card_opiniones myCardReseñas col-sm-8 col-lg-12 col-xl-8 mb-5">
+                                            <form class="container py-3 text-center" id="valoracionForm">
+                                                <div class="mb-3">
+                                                    <h5 for="valoracion" class="form-label card_color_blanco">Valoración
+                                                    </h5>
+                                                    <select id="valoracion" class="form-control myForm my-3" required>
+                                                        <option value="">Seleccione una opción</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                                <button type="submit" class="btn myBtn">Enviar</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="">
+        <div class="container-fluid colorFooter py-4 tamañoFooter">
+            <div class=" row ">
+                <div class="col-12 pb-4  alineacion">
+                    <a href="../index.html" class="ubicacionLogo">
+                        <span>
+                            <img src="../img/Rush (1)_preview_rev_1.png" alt="logo" class="footerLogo">
+                        </span>
+                    </a>
+                    <div class="ubicacionLista">
+                        <ul class="textoListaFooter inclinacionListaFooter ">
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">SEGURIDAD</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter"> TERMINOS
+                                    LEGALES</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">AVISO DE
+                                    PRIVACIDAD</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">TERMINOS DE
+                                    SERVICIO</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html"
+                                    class="listaFooter">ACCESIBILIDAD</a></li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">ASISTENCIA AL
+                                    JUGADOR</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerSocial ">
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-twitter-x"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-instagram"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <hr class="hrFooter">
+                <div class="col-12 footer ">
+                    <div class="columna1">
+                        <div class="cookies">
+                            <a href="./404.html" class="link colorLinksFooter">
+                                Preferencias de cookies
+                            </a>
+                        </div>
+                        <div class="derechos">
+                            <small class="colorTextoFooter">
+                                <span class="ms-1 desaparece">
+                                    |
+                                </span>
+                                © 2023 Pixel Games, Inc. Todos los derechos reservados.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="ms-auto me-2 columna2">
+                        <a href="#ancla_inicio" class="ps-auto IrINICIO">ir al inicio
+                            <i class="bi bi-caret-up-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+
+</html>
