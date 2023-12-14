@@ -7,7 +7,9 @@ Cuenta con un login de administrador para asi agregar, editar y borrar juegos se
 ### Librerias
 Aqui dejamos el link de la libreria que utilizamos
 
-- [Bootstrap](https://getbootstrap.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [sweetalert v2](https://sweetalert2.github.io/)
+- [npm uuid](https://www.npmjs.com/package/uuid)
 
 ### Nos ayudas a mejorar?
 
