@@ -119,7 +119,6 @@ export default class Juego {
   set desarrollador(nuevoDesarrollador) {
     this.#desarrollador = nuevoDesarrollador;
   }
-  // Para que funcione JSON.stringify
   toJSON() {
     return {
       codigo: this.codigo,

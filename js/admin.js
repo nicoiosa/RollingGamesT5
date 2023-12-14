@@ -24,12 +24,10 @@ let codigoEditando = null;
 
 const validarTexto = (elemento, minimo, maximo, nombre) => {
   if (elemento.length > maximo) {
-    // Aquí voy a hacer algo.
     alert(`El campo '${nombre}' debe tener un máximo de ${maximo} caracteres.`);
     return false;
   }
   if (elemento.length < minimo) {
-    // Aquí voy a hacer algo.
     alert(`El campo '${nombre}' debe tener un mínimo de ${minimo} caracteres.`);
     return false;
   } else {
@@ -55,36 +53,25 @@ const validarPrecio = (precio) => {
   return true;
 };
 const validarImagen = (url,nombre) => {
-  // Expresión regular para validar una URL
   const formatoUrlValido = /^(https?:\/\/)/i.test(url);
-
   if (!formatoUrlValido) {
     alert(`
     Campo de "URL de Imagen" NO ACEPTADO
-
-
     La URL de "${nombre}" no es válida.
     Debe comenzar con "https://" o "http://".
     `);
     return false;
   } 
-
-  // Expresión regular para validar una URL de imagen
   const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp|avif)$/i.test(url);
-
   if (!formatoImagenValido) {
     alert(`
     Campo de "URL de Imagen" NO ACEPTADO
-
-
     La URL de "${nombre}" no es válida.
     Debe ser una URL de imagen con una extensión válida.
-
     Ejemplo: jpeg, jpg, gif, png, bmp, webp, avif.
     `);
     return false;
   }
-
   return true;
 };
 const validarCategoria = (categoria) => {
