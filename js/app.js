@@ -35,4 +35,4 @@ function borrarPadresVacios() {
   });
 }
 
-borrarPadresVacios()
+borrarPadresVacios();

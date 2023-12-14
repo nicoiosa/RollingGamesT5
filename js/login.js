@@ -46,7 +46,7 @@ function logOut() {
   estadoActual = false;
   guardarEnSessionStorage();
   if (
-    paginaActual === "/pages/detail.html" ||
+    paginaActual == "/pages/detail.html" ||
     paginaActual === "/pages/aboutUs.html"
   ) {
     location.reload();
