@@ -33,9 +33,16 @@ h6{
     background-size: cover; 
 }
 
+
+    
+
 .link2{
+   
     margin-left: 7px;
     padding: 5px;
-    
+    border-radius: 10%;
+    box-shadow: 0 0 20px rgba(235, 28, 28, 0.76);
+     /* Agrega un efecto de sombra que simula brillo */
 }
+
 
