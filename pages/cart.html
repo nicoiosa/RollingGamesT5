@@ -24,7 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/wishlist.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
     <script
       src="https://kit.fontawesome.com/5c9d8505e5.js"
       crossorigin="anonymous"
@@ -108,124 +108,136 @@
             </div>
           </form>
           <div class="d-flex gap-5">
-            <a class="nav-link hover_nav_link" aria-current="page" href="#"
+            <a
+              class="nav-link hover_nav_link text-light"
+              aria-current="page"
+              href="./cart.html"
               >CARRITO</a
             >
-            <a class="nav-link hover_nav_link text-light" href="./wishList.html"
+            <a class="nav-link hover_nav_link" href="./wishList.html"
               >LISTA DE DESEADOS</a
             >
           </div>
         </div>
       </nav>
       <div class="cuerpoLista">
-        <section class="container py-4">
-          <article class="text-center">
-            <h2 class="titulo display-4 pb-3">LISTA DE DESEOS</h2>
-            <hr />
-          </article>
-          <article class="row justify-content-center mt-4 mb-2">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100">
-                <img
-                  src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
-                  class="card-img-top"
-                  alt="filamento ecofila"
-                />
-                <div class="card-body bg-dark text-light text-center">
-                  <div class="row">
-                    <div class="text-end col-6">
-                      <h5 class="card-title">EA SPORTS FC 24</h5>
-                    </div>
-                    <div class="text-end col-6 text-secondary">
-                      <h5><b>1 US$</b></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="text-center card-footer bg-dark">
-                  <a href="#" class="linkEliminar me-1">Eliminar</a>
-                  <a href="#" class="btn btnCuadrado"
-                    >Agregar al Carrito</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100">
-                <img
-                  src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
-                  class="card-img-top"
-                  alt="filamento ecofila"
-                />
-                <div class="card-body bg-dark text-light text-center">
-                  <div class="row">
-                    <div class="text-end col-6">
-                      <h5 class="card-title">EA SPORTS FC 24</h5>
-                    </div>
-                    <div class="text-end col-6 text-secondary">
-                      <h5><b>1 US$</b></h5>
+        <div class="container">
+            <div class="row">
+              <section class="py-4 col-md-6 col-lg-8">
+                <article class="text-center">
+                  <h2 class="titulo display-4 pb-3">MI CARRITO</h2>
+                  <hr />
+                </article>
+                <article class="row justify-content-center mt-4 mb-2">
+                  <div class="col-lg-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
+                        class="card-img-top"
+                        alt="filamento ecofila"
+                      />
+                      <div class="card-body bg-dark text-light text-center">
+                        <div class="row">
+                          <div class="text-end col-6">
+                            <h5 class="card-title">EA SPORTS FC 24</h5>
+                          </div>
+                          <div class="text-end col-6 text-secondary">
+                            <h5><b>1 US$</b></h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center card-footer bg-dark">
+                        <a href="#" class="linkEliminar">Eliminar del carrito</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="text-center card-footer bg-dark">
-                  <a href="#" class="linkEliminar me-1">Eliminar</a>
-                  <a href="#" class="btn btnCuadrado"
-                    >Agregar al Carrito</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100">
-                <img
-                  src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
-                  class="card-img-top"
-                  alt="filamento ecofila"
-                />
-                <div class="card-body bg-dark text-light text-center">
-                  <div class="row">
-                    <div class="text-end col-6">
-                      <h5 class="card-title">EA SPORTS FC 24</h5>
-                    </div>
-                    <div class="text-end col-6 text-secondary">
-                      <h5><b>1 US$</b></h5>
+                  <div class="col-lg-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
+                        class="card-img-top"
+                        alt="filamento ecofila"
+                      />
+                      <div class="card-body bg-dark text-light text-center">
+                        <div class="row">
+                          <div class="text-end col-6">
+                            <h5 class="card-title">EA SPORTS FC 24</h5>
+                          </div>
+                          <div class="text-end col-6 text-secondary">
+                            <h5><b>1 US$</b></h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center card-footer bg-dark">
+                        <a href="#" class="linkEliminar">Eliminar del carrito</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="text-center card-footer bg-dark">
-                  <a href="#" class="linkEliminar me-1">Eliminar</a>
-                  <a href="#" class="btn btnCuadrado"
-                    >Agregar al Carrito</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100">
-                <img
-                  src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
-                  class="card-img-top"
-                  alt="filamento ecofila"
-                />
-                <div class="card-body bg-dark text-light text-center">
-                  <div class="row">
-                    <div class="text-end col-6">
-                      <h5 class="card-title">EA SPORTS FC 24</h5>
-                    </div>
-                    <div class="text-end col-6 text-secondary">
-                      <h5><b>1 US$</b></h5>
+                  <div class="col-lg-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                      <img
+                        src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
+                        class="card-img-top"
+                        alt="filamento ecofila"
+                      />
+                      <div class="card-body bg-dark text-light text-center">
+                        <div class="row">
+                          <div class="text-end col-6">
+                            <h5 class="card-title">EA SPORTS FC 24</h5>
+                          </div>
+                          <div class="text-end col-6 text-secondary">
+                            <h5><b>1 US$</b></h5>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-center card-footer bg-dark">
+                        <a href="#" class="linkEliminar">Eliminar del carrito</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="text-center card-footer bg-dark">
-                  <a href="#" class="linkEliminar me-1">Eliminar</a>
-                  <a href="#" class="btn btnCuadrado"
-                    >Agregar al Carrito</a
-                  >
-                </div>
-              </div>
+                </article>
+              </section>
+              <section class="py-4 col-md-6 col-lg-4 text-center">
+                <article class="text-center">
+                  <h4>Resumen</h4>
+                  <div class="row">
+                    <div class="col-6">
+                      <h6 class="text-start">Precio</h6>
+                    </div>
+                    <div class="text-end col-6 text-secondary">
+                      <h6><b>3 US$</b></h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <h6 class="text-start">Descuento</h6>
+                    </div>
+                    <div class="text-end col-6 text-secondary">
+                      <h6><b>0 US$</b></h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <h6 class="text-start">Impuestos</h6>
+                    </div>
+                    <div class="text-end col-6 text-secondary">
+                      <h6><b>Calculados al finalizar compra</b></h6>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="text-start col-6">
+                      <h5 class="card-title">Subtotal</h5>
+                    </div>
+                    <div class="text-end col-6 text-secondary">
+                      <h5><b>10 US$</b></h5>
+                    </div>
+                  </div>
+                  <button class="btn btnCuadrado">Finalizar Compra</button>
+                </article>
+              </section>
             </div>
-          </article>
-        </section>
+        </div>
       </div>
     </main>
     <footer class="">
