@@ -128,8 +128,11 @@
           </section>
           <div class="row">
             <section class="pb-4 col-md-6 col-lg-8">
-              <article class="row justify-content-center mt-4 mb-2" id="padreCards">
-                <div class="col-lg-6 col-lg-4 mb-4">
+              <article
+                class="row justify-content-center mt-4 mb-2"
+                id="padreCards"
+              >
+                <!-- <div class="col-lg-6 col-lg-4 mb-4">
                   <div class="card h-100">
                     <img
                       src="https://cdn2.unrealengine.com/egs-easportsfc24standardedition-eacanada-s1-2560x1440-b8f47ad67d72.jpg"
@@ -216,46 +219,12 @@
                       <a href="#" class="linkEliminar">Eliminar del carrito</a>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </article>
             </section>
             <section class="py-4 col-md-6 col-lg-4 text-center">
-              <article class="text-center">
-                <h4>Resumen</h4>
-                <div class="row">
-                  <div class="col-6">
-                    <h6 class="text-start">Precio</h6>
-                  </div>
-                  <div class="text-end col-6 text-secondary">
-                    <h6><b>3 US$</b></h6>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <h6 class="text-start">Descuento</h6>
-                  </div>
-                  <div class="text-end col-6 text-secondary">
-                    <h6><b>0 US$</b></h6>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-6">
-                    <h6 class="text-start">Impuestos</h6>
-                  </div>
-                  <div class="text-end col-6 text-secondary">
-                    <h6><b>Calculados al finalizar compra</b></h6>
-                  </div>
-                </div>
-                <hr />
-                <div class="row">
-                  <div class="text-start col-6">
-                    <h5 class="card-title">Subtotal</h5>
-                  </div>
-                  <div class="text-end col-6 text-secondary">
-                    <h5><b>3 US$</b></h5>
-                  </div>
-                </div>
-                <button class="btn btnCuadrado">Finalizar Compra</button>
+              <article class="text-center" id="padreResumen">
+                <!-- Resumen. -->
               </article>
             </section>
           </div>
@@ -348,6 +317,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/cart.js"></script>
   </body>
 </html>

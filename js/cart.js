@@ -30,8 +30,15 @@ const crearCard = (juego) => {
     `;
 }
 const cargaInicial = () => {
+    let subtotal = 0;
     if(listaCarro.length > 0) {
-        listaCarro.map((itemJuego) => crearCard(itemJuego));
+        listaCarro.map((itemJuego) => {
+            crearCard(itemJuego);
+
+            const numeroPrecio = parseFloat(itemJuego.precio);
+            subtotal += numeroPrecio;
+        });
+        crearResumen(subtotal);
     } else {
         alert("No hay juegos en tu carrito.");
     }
@@ -63,6 +70,56 @@ window.borrarJuego = (codigo) => {
         showConfirmButton: false,
         background: "#343a40",
         color: "#fff",
-        timer: 3000,
+        timer: 2000,
     });
+
+    // Recargar página para actualizar resumen.
+    refrescarPagina();
 }
+const crearResumen = (total) => {
+    const padreResumen = document.querySelector("#padreResumen");
+    padreResumen.innerHTML += `
+    <h4>Resumen</h4>
+                <div class="row">
+                  <div class="col-6">
+                    <h6 class="text-start">Precio</h6>
+                  </div>
+                  <div class="text-end col-6 text-secondary">
+                    <h6><b>${total} US$</b></h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h6 class="text-start">Descuento</h6>
+                  </div>
+                  <div class="text-end col-6 text-secondary">
+                    <h6><b>0 US$</b></h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h6 class="text-start">Impuestos</h6>
+                  </div>
+                  <div class="text-end col-6 text-secondary">
+                    <h6><b>Calculados al finalizar compra</b></h6>
+                  </div>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="text-start col-6">
+                    <h5 class="card-title">Subtotal</h5>
+                  </div>
+                  <div class="text-end col-6 text-secondary">
+                    <h5><b>${total} US$</b></h5>
+                  </div>
+                </div>
+                <a href="../pages/404.html" class="btn btnCuadrado">Finalizar Compra</a>
+    `;
+}
+const refrescarPagina = () => {
+    setTimeout(() => {
+        location.reload();
+    }, 4000);
+}
+
+cargaInicial();
