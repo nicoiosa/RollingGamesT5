@@ -52,7 +52,7 @@ const validarPrecio = (precio) => {
   }
   return true;
 };
-const validarImagen = (url,nombre) => {
+const validarImagen = (url, nombre) => {
   const formatoUrlValido = /^(https?:\/\/)/i.test(url);
   if (!formatoUrlValido) {
     alert(`
@@ -61,7 +61,7 @@ const validarImagen = (url,nombre) => {
     Debe comenzar con "https://" o "http://".
     `);
     return false;
-  } 
+  }
   const formatoImagenValido = /\.(jpeg|jpg|gif|png|bmp|webp|avif)$/i.test(url);
   if (!formatoImagenValido) {
     alert(`
@@ -125,12 +125,12 @@ const crearJuego = (e) => {
   const validarTitulo = validarTexto(titulo.value, 2, 30, "titulo");
   const validarPre = validarPrecio(precio.value);
   const validarCat = validarCategoria(categoria.value);
-  const validarImgP = validarImagen(imagenP.value,"Portada");
-  const validarImgL = validarImagen(imagenL.value,"Logo");
-  const validarImgU = validarImagen(imagenU.value,"Carrusel 1");
-  const validarImgD = validarImagen(imagenD.value,"Carrusel 2");
-  const validarImgT = validarImagen(imagenT.value,"Carrusel 3");
-  const validarImgC = validarImagen(imagenC.value,"Carrusel 4");
+  const validarImgP = validarImagen(imagenP.value, "Portada");
+  const validarImgL = validarImagen(imagenL.value, "Logo");
+  const validarImgU = validarImagen(imagenU.value, "Carrusel 1");
+  const validarImgD = validarImagen(imagenD.value, "Carrusel 2");
+  const validarImgT = validarImagen(imagenT.value, "Carrusel 3");
+  const validarImgC = validarImagen(imagenC.value, "Carrusel 4");
   const validarDesc = validarTexto(descripcion.value, 5, 500, "descripcion");
   const validarReq = validarTexto(requisitos.value, 5, 200, "requisitos");
   const validarDev = validarTexto(desarrollador.value, 2, 30, "desarrollador");
@@ -162,7 +162,8 @@ const crearJuego = (e) => {
         imagenC.value,
         descripcion.value,
         requisitos.value,
-        desarrollador.value
+        desarrollador.value,
+        null
       );
       const posicionJuego = listaJuegos.findIndex(
         (juego) => juego.codigo === codigoEditando
@@ -183,7 +184,8 @@ const crearJuego = (e) => {
         imagenC.value,
         descripcion.value,
         requisitos.value,
-        desarrollador.value
+        desarrollador.value,
+        []
       );
       listaJuegos.push(nuevoJuego);
     }

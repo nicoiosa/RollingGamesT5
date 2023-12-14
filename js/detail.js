@@ -39,7 +39,8 @@ imagenCCar.src = juego.imagenC;
 // Variables
 
 const btnAgregarLista = document.querySelector("#btnAgregarLista");
-const listaDeseados = JSON.parse(localStorage.getItem("listaDeseadosKey")) || [];
+const listaDeseados =
+  JSON.parse(localStorage.getItem("listaDeseadosKey")) || [];
 const btnAgregarCarro = document.querySelector("#btnAgregarCarro");
 const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey")) || [];
 
@@ -56,39 +57,96 @@ const guardarEnLocalStorageCarro = () => {
 const crearDeseado = () => {
   const agregado = ` ❤️ Agregado`;
 
-  if(btnAgregarLista.innerHTML != agregado) {
+  if (btnAgregarLista.innerHTML != agregado) {
     // 1: tomar info. (¿Cuál info?)
     console.log(juego);
-  
+
     // 2: guardar objeto en lista deseados.
-    listaDeseados.push(juego); 
-  
+    listaDeseados.push(juego);
+
     // 3: guardar lista deseados en localStorage
     guardarEnLocalStorageDeseados();
-  
+
     // 4: deshabilitar el botón.
-    btnAgregarLista.innerHTML = ` ❤️ Agregado`
+    btnAgregarLista.innerHTML = ` ❤️ Agregado`;
   }
-}
+};
 const crearItemCarro = () => {
   const agregado = ` 🛒 Agregado`;
 
-  if(btnAgregarCarro.innerHTML != agregado) {
+  if (btnAgregarCarro.innerHTML != agregado) {
     // 1: tomar info. (¿Cuál info?)
     console.log(juego);
-  
+
     // 2: guardar objeto en lista carro.
     listaCarro.push(juego);
-  
+
     // 3: guardar lista deseados en localStorage
     guardarEnLocalStorageCarro();
-  
+
     // 4: deshabilitar el botón.
-    btnAgregarCarro.innerHTML = ` 🛒 Agregado`
+    btnAgregarCarro.innerHTML = ` 🛒 Agregado`;
   }
-}
+};
 
 // Resto de la lógica
 
-btnAgregarLista.addEventListener("click",crearDeseado);
-btnAgregarCarro.addEventListener("click",crearItemCarro);
+btnAgregarLista.addEventListener("click", crearDeseado);
+btnAgregarCarro.addEventListener("click", crearItemCarro);
+
+const valoracionForm = document.getElementById("valoracionForm"),
+  valoracion = document.getElementById("valoracion"),
+  comentario = document.getElementById("comentario"),
+  calificacion = document.getElementById("calificacion"),
+  reseñasPadre = document.getElementById("reseñasPadre");
+
+function calcularValoracion() {
+  const arr = juego.reseñas;
+  console.log(arr);
+  if (arr.length === 0) {
+    calificacion.innerText = "No hay valoraciones";
+    return;
+  }
+  const suma = arr.reduce(
+    (acumulador, valor) => acumulador + parseInt(valor),
+    0
+  );
+  const promedio = Math.round((suma / arr.length) * 10) / 10;
+  calificacion.innerText = promedio;
+  console.log(suma);
+}
+
+function subirValoracion(e) {
+  e.preventDefault();
+  juego.reseñas.push(valoracion.value);
+  guardarEnLStorage();
+  limpiarform();
+  calcularValoracion();
+  dibujarCard()
+}
+function limpiarform() {
+  valoracionForm.reset();
+}
+function guardarEnLStorage() {
+  localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
+}
+function dibujarCard() {
+  if (comentario.value.length > 5) {
+    const nuevaReseña = document.createElement("div");
+    nuevaReseña.className = "col-4 tamaño_cards_sm";
+    nuevaReseña.innerHTML = `<div class="card card_opiniones">
+    <div class="card-body">
+        <h5 class="card-title card_color_blanco">Xx.Dylan05.xX</h5>
+        <hr>
+        <p class="card-text card_color_texto">
+            "${comentario.value}"
+        </p>
+    </div>
+</div>`;
+    reseñasPadre.appendChild(nuevaReseña);
+  }
+}
+
+valoracionForm.addEventListener("submit", subirValoracion);
+calcularValoracion();
+dibujarCard()
