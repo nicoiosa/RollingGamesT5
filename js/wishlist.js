@@ -88,7 +88,7 @@ window.crearItemCarro = (codigo) => {
 
     Swal.fire({
         icon: "success",
-        title: "VideoJuego Agregado a Carrito con Éxito",
+        title: "VideoJuego Agregado al Carrito",
         showConfirmButton: false,
         background: "#343a40",
         color: "#fff",
