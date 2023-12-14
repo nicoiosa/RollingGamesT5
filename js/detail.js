@@ -47,9 +47,13 @@ const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey")) || [];
 
 // Funciones
 
-const guardarEnLocalStorage = () => {
+const guardarEnLocalStorageDeseados = () => {
   // Guardar y Actualizar en este caso es lo mismo
   localStorage.setItem("listaDeseadosKey", JSON.stringify(listaDeseados));
+};
+const guardarEnLocalStorageCarro = () => {
+  // Guardar y Actualizar en este caso es lo mismo
+  localStorage.setItem("listaCarroKey", JSON.stringify(listaCarro));
 };
 const crearDeseado = () => {
   const agregado = ` ❤️ Agregado`;
@@ -62,7 +66,7 @@ const crearDeseado = () => {
     listaDeseados.push(juego); 
   
     // 3: guardar lista deseados en localStorage
-    guardarEnLocalStorage();
+    guardarEnLocalStorageDeseados();
   
     // 4: deshabilitar el botón.
     btnAgregarLista.innerHTML = ` ❤️ Agregado`
@@ -79,7 +83,7 @@ const crearItemCarro = () => {
     listaCarro.push(juego);
   
     // 3: guardar lista deseados en localStorage
-    guardarEnLocalStorage();
+    guardarEnLocalStorageCarro();
   
     // 4: deshabilitar el botón.
     btnAgregarCarro.innerHTML = ` 🛒 Agregado`
