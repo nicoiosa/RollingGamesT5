@@ -1,8 +1,8 @@
 const parametroURL = new URLSearchParams(window.location.search);
 
-const listaJuegos = JSON.parse(localStorage.getItem("listaDeseadosKey"));
+const listaJuegos = JSON.parse(localStorage.getItem("listaDeseadosKey")) || [];
 
-const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey"));
+const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey")) || [];
 
 const crearCard = (juego) => {
   const padreCard = document.querySelector("#padreCard");
