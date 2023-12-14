@@ -231,6 +231,10 @@ nav {
 .dropdown-menu li:hover {
   background-color: #2a2a2a;
 }
+.linkRegister a{
+  font-size: 18px;
+  color: #d13639;
+}
 
 @media screen and (min-width: 1024px) {
   .marginNav {

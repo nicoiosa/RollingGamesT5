@@ -7,11 +7,11 @@ const loginForm = document.getElementById("loginForm"),
   liAdmin = document.getElementById("liAdmin"),
   btnLogOut = document.getElementById("btnLogOut");
 let paginaActual = window.location.pathname,
-  estadoActual = JSON.parse(sessionStorage.getItem("estadoActualKey")) || false;
+  estadoActualAdmin =
+    JSON.parse(sessionStorage.getItem("estadoActualAdminKey")) || false,
+  estadoActualInvitado =
+    JSON.parse(sessionStorage.getItem("estadoActualInvitadoKey")) || false;
 
-const baseDatosUsuario = {
-  "nicoiosa@admin.com": "maxverstappen",
-};
 const limpiarLogin = () => {
   loginForm.reset();
 };
@@ -22,14 +22,34 @@ const cerrarLogin = () => {
   loginModal.hide();
   limpiarLogin();
 };
+
+const baseDatosUsuario = {
+  admin: {
+    email: "nicoiosa@admin.com",
+    contraseña: "maxverstappen",
+  },
+};
+listaUsuario = JSON.parse(localStorage.getItem("listaUsuarioKey")) || [];
 function login(e) {
   e.preventDefault();
   const email = document.getElementById("loginEmail1").value;
   const contraseña = document.getElementById("loginPassword").value;
-  if (baseDatosUsuario.hasOwnProperty(email)) {
-    if (contraseña === baseDatosUsuario[email]) {
+  if (email === baseDatosUsuario.admin.email) {
+    if (contraseña === baseDatosUsuario.admin.contraseña) {
       alert("¡Inicio de sesion exitoso!");
-      estadoActual = true;
+      estadoActualAdmin = true;
+      guardarEnSessionStorage();
+      cerrarLogin();
+      actualizarEstado();
+      F;
+    } else {
+      alert("Contraseña incorrecta. Pruebe de nuevo.");
+    }
+  } else if (listaUsuario.every((usuario) => usuario.email === email)) {
+    const usuario = listaUsuario[email];
+    if (usuario.contraseña === contraseña) {
+      alert("¡Inicio de sesion exitoso!");
+      estadoActualInvitado = true;
       guardarEnSessionStorage();
       cerrarLogin();
       actualizarEstado();
@@ -43,7 +63,7 @@ function login(e) {
 function logOut() {
   alert;
   ("¡Cierre de sesion exitoso!");
-  estadoActual = false;
+  estadoActualAdmin = false;
   guardarEnSessionStorage();
   if (
     paginaActual == "/pages/detail.html" ||
@@ -55,10 +75,14 @@ function logOut() {
   }
 }
 function actualizarEstado() {
-  if (estadoActual) {
+  if (estadoActualAdmin) {
     liLogIn.className = "me-4 margen_icono d-none";
     liLogOut.className = "me-4 margen_icono";
     liAdmin.className = "me-4 margen_icono";
+  } else if (estadoActualInvitado) {
+    liLogIn.className = "me-4 margen_icono d-none";
+    liLogOut.className = "me-4 margen_icono";
+    liAdmin.className = "me-4 margen_icono d-none";
   } else {
     liLogIn.className = "me-4 margen_icono";
     liLogOut.className = "me-4 margen_icono d-none";
@@ -66,7 +90,10 @@ function actualizarEstado() {
   }
 }
 function guardarEnSessionStorage() {
-  sessionStorage.setItem("estadoActualKey", JSON.stringify(estadoActual));
+  sessionStorage.setItem(
+    "estadoActualAdminKey",
+    JSON.stringify(estadoActualAdmin)
+  );
 }
 
 loginForm.addEventListener("submit", login);

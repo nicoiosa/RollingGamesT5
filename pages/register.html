@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rolling Team 5 - Facundo Alejo Herrera" />
+    <meta name="keywords" content="tienda, videojuegos, gratis, descuentos" />
+    <meta name="description" content="Mejor tienda de videojuegos en el mercado ¡Compra tus juegos aqui!" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <title>Pixel Games</title>
+</head>
+
+<body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg colorNav navbar-dark px-lg-1" id="ancla_inicio">
+            <div class="container-fluid">
+                <a class="navbar-brand p-0" href="../index.html"><img src="../img/Rush (1)_preview_rev_1.png" alt="logo"
+                        class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-md-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="pe-3 margen_tienda">
+                            <a class="nav-link" href="../index.html">TIENDA</a>
+                        </li>
+                        <li class="nav-item margen_sobreNosotros">
+                            <a class="nav-link" href="./aboutUs.html">SOBRE NOSOTROS</a>
+                        </li>
+                    </ul>
+                    <div class="ms-auto me-5">
+                    </div>
+                    <ul class="navbar-nav">
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex flex-column">
+        <section class="container-fluid my-auto">
+            <h2 class="mb-3 text-center">Registrarse</h2>
+            <div class="row justify-content-center">
+                <div class="col-11 col-md-8 col-lg-6 col-xl-4">
+                    <form>
+                        <div class="mb-4">
+                            <label for="registerName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="registerName"
+                                placeholder="Michael de Santa" minlength="4" maxlength="40" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" aria-describedby="ayudaEmail"
+                                placeholder="ejemplo@pixelgames.com" minlength="5" maxlength="60" required>
+                            <div id="ayudaEmail" class="form-text">Nunca compartiremos tu email con nadie.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="registerPassword" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="registerPassword" aria-describedby="ayudaContraseña" placeholder="✱✱✱✱✱✱"
+                                minlength="8" maxlength="24" required>
+                                <div id="ayudaContraseña" class="form-text">Debe contener al menos una <b>mayuscula</b>, una <b>minuscula</b> y un <b>numero</b>.</div>
+                        </div>
+                        <button type="submit" class="btn myBtn">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="">
+        <div class="container-fluid colorFooter py-4 tamañoFooter">
+            <div class=" row ">
+                <div class="col-12 pb-4  alineacion">
+                    <a href="../index.html" class="ubicacionLogo">
+                        <span>
+                            <img src="../img/Rush (1)_preview_rev_1.png" alt="logo" class="footerLogo">
+                        </span>
+                    </a>
+                    <div class="ubicacionLista">
+                        <ul class="textoListaFooter inclinacionListaFooter ">
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">SEGURIDAD</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter"> TERMINOS
+                                    LEGALES</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">AVISO DE
+                                    PRIVACIDAD</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">TERMINOS DE
+                                    SERVICIO</a>
+                            </li>
+                            <li class="inclinacionListaFooter"><a href="./404.html"
+                                    class="listaFooter">ACCESIBILIDAD</a></li>
+                            <li class="inclinacionListaFooter"><a href="./404.html" class="listaFooter">ASISTENCIA AL
+                                    JUGADOR</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footerSocial ">
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-facebook"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-twitter-x"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-instagram"></i></a>
+                        <a href="./404.html" class="footerIcons"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <hr class="hrFooter">
+                <div class="col-12 footer ">
+                    <div class="columna1">
+                        <div class="cookies">
+                            <a href="./404.html" class="link colorLinksFooter">
+                                Preferencias de cookies
+                            </a>
+                        </div>
+                        <div class="derechos">
+                            <small class="colorTextoFooter">
+                                <span class="ms-1 desaparece">
+                                    |
+                                </span>
+                                © 2023 Pixel Games, Inc. Todos los derechos reservados.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="ms-auto me-2 columna2">
+                        <a href="#ancla_inicio" class="ps-auto IrINICIO">ir al inicio
+                            <i class="bi bi-caret-up-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>
