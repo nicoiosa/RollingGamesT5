@@ -12,6 +12,7 @@ export default class Juego {
   #descripcion;
   #requisitos;
   #desarrollador;
+  #reseñas
   constructor(
     codigo = uuidv4(),
     titulo,
@@ -25,7 +26,8 @@ export default class Juego {
     imagenC,
     descripcion,
     requisitos,
-    desarrollador
+    desarrollador,
+    reseñas
   ) {
     this.#codigo = codigo;
     this.#titulo = titulo;
@@ -40,6 +42,7 @@ export default class Juego {
     this.#descripcion = descripcion;
     this.#requisitos = requisitos;
     this.#desarrollador = desarrollador;
+    this.#reseñas = reseñas;
   }
   get codigo() {
     return this.#codigo;
@@ -119,6 +122,12 @@ export default class Juego {
   set desarrollador(nuevoDesarrollador) {
     this.#desarrollador = nuevoDesarrollador;
   }
+  get reseñas() {
+    return this.#reseñas;
+  }
+  set reseñas(nuevoReseñas) {
+    this.#reseñas = nuevoReseñas;
+  }
   toJSON() {
     return {
       codigo: this.codigo,
@@ -134,6 +143,7 @@ export default class Juego {
       descripcion: this.descripcion,
       requisitos: this.requisitos,
       desarrollador: this.desarrollador,
+      reseñas: this.reseñas,
     };
   }
 }

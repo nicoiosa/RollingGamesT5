@@ -120,15 +120,8 @@
                             </div>
                             <div class="d-flex ">
                                 <div class="d-flex">
-                                    <div>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-fill"></i></span>
-                                        <span><i class="bi bi-star-half"></i></span>
-                                    </div>
                                     <div class="calificacion">
-                                        <span>4.5</span>
+                                        <span id="calificacion"></span>
                                     </div>
                                 </div>
                             </div>
@@ -241,11 +234,12 @@
                                         <a href="./404.html" class=" btn btn-danger boton_comprar ">Comprar</a>
                                     </div>
                                     <div>
-                                        <button href="#" class="añadir_carrito btn boton1 w-100" id="btnAgregarCarro">Añadir al carrito</button>
+                                        <button href="#" class="añadir_carrito btn boton1 w-100"
+                                            id="btnAgregarCarro">Añadir al carrito</button>
                                     </div>
                                     <div>
-                                        <button href="#" class="añadir_carrito btn boton2 w-100" id="btnAgregarLista"> <i
-                                                class="bi bi-plus-circle"></i>Lista de deseados</button>
+                                        <button href="#" class="añadir_carrito btn boton2 w-100" id="btnAgregarLista">
+                                            <i class="bi bi-plus-circle"></i>Lista de deseados</button>
                                     </div>
                                     <div class="centrar_desarrollador">
                                         <span class="desarrollador">Desarrollador:</sp>
@@ -258,72 +252,23 @@
                                         <div><a href="./404.html" class="btn reportar"><i
                                                     class="bi bi-flag-fill bandera_roja"></i>REPORTAR</a></div>
                                     </div>
-                                </div>
-                            </div>
-                            <div>
-                                <hr>
-                            </div>
-                            <div class="opiniones">
-                                <div class="container-fluid">
-                                    <div class="d-flex justify-content-center text-center">
-                                        <span class="reseñas">Reseñas</span>
-                                    </div>
-                                    <div class="row margen_cards">
-                                        <div class="col-4 tamaño_cards_sm">
-                                            <div class="card card_opiniones">
-                                                <div class="card-body">
-                                                    <h5 class="card-title card_color_blanco">Xx.Dylan05.xX</h5>
-                                                    <hr>
-                                                    <h6 class="card-subtitle mb-2 text-body-secondary ">
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                    </h6>
-                                                    <p class="card-text card_color_texto">
-                                                        "Es uno de los mejores juegos de la historia reciente."
-                                                    </p>
+                                    <div class="row justify-content-center mt-5">
+                                        <div class="card card_opiniones myCardReseñas col-sm-8 col-lg-12 col-xl-8 mb-5">
+                                            <form class="container py-3 text-center" id="valoracionForm">
+                                                <div class="mb-3">
+                                                    <h5 for="valoracion" class="form-label card_color_blanco">Valoración
+                                                    </h5>
+                                                    <select id="valoracion" class="form-control myForm my-3" required>
+                                                        <option value="">Seleccione una opción</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 tamaño_cards_sm">
-                                            <div class="card card_opiniones">
-                                                <div class="card-body">
-                                                    <h5 class="card-title card_color_blanco">Gustavo Cerati</h5>
-                                                    <hr>
-                                                    <h6 class="card-subtitle mb-2 text-body-secondary ">
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star card_color_blanco"></i>
-                                                    </h6>
-                                                    <p class="card-text card_color_texto">
-                                                        "Desde la nueva actializacion que subieron quede locoo."
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 tamaño_cards_sm">
-                                            <div class="card card_opiniones">
-                                                <div class="card-body">
-                                                    <h5 class="card-title card_color_blanco">kirbon07</h5>
-                                                    <hr>
-                                                    <h6 class="card-subtitle mb-2 text-body-secondary ">
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star-fill card_color_blanco"></i>
-                                                        <i class="bi bi-star card_color_blanco"></i>
-                                                        <i class="bi bi-star card_color_blanco"></i>
-                                                        <i class="bi bi-star card_color_blanco"></i>
-                                                    </h6>
-                                                    <p class="card-text card_color_texto">
-                                                        "La verdad que un asco las nuevas actializaciones, desde hace
-                                                        tiempo que no saben que añadir al juego y solo lo va
-                                                        empeorando cada dia mas."
-                                                    </p>
-                                                </div>
-                                            </div>
+                                                <button type="submit" class="btn myBtn">Enviar</button>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
