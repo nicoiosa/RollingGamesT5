@@ -14,7 +14,7 @@ const crearCard = (juego) => {
             />
             <div class="card-body bg-dark text-light text-center">
                 <div class="row">
-                    <div class="text-end col-6">
+                    <div class="text-start col-6">
                         <h5 class="card-title">${juego.titulo}</h5>
                     </div>
                     <div class="text-end col-6 text-secondary">
