@@ -35,13 +35,13 @@ const validarTexto = (elemento, minimo, maximo, nombre) => {
   }
 };
 const validarPrecio = (precio) => {
-  const formatoValido = /^\d+(\.\d{1,2})?\s?UD\$$/.test(precio);
+  const formatoValido = /^\d+(\.\d{1,2})?\s?US\$$/.test(precio);
   if (precio === "Gratis" || precio === "gratis") {
     return true;
   } else if (!formatoValido) {
     alert(`
       El formato del precio no es válido.
-      Debe ser un número seguido de "UD$".
+      Debe ser un número seguido de "US$".
       O bien, si no cuesta nada entonces "Gratis".`);
     return false;
   }
