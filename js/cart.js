@@ -2,16 +2,13 @@ const parametroURL = new URLSearchParams(window.location.search);
 
 const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey")) || [];
 
-const guardarEnLocalStorage = () => {
-    localStorage.setItem("listaCarroKey", JSON.stringify(listaCarro));
-  };
 const crearCard = (juego) => {
     const padreCards = document.querySelector("#padreCards");
     padreCards.innerHTML += `
     <div class="col-lg-6 col-lg-4 mb-4">
         <div class="card h-100">
             <img
-                src="${juego.img}"
+                src="${juego.imagenP}"
                 class="card-img-top"
                 alt="portada de juego"
             />
@@ -36,9 +33,12 @@ const cargaInicial = () => {
     if(listaCarro.length > 0) {
         listaCarro.map((itemJuego) => crearCard(itemJuego));
     } else {
-        alert("No hay juegos para mostrar");
+        alert("No hay juegos en tu carrito.");
     }
 }
+const guardarEnLocalStorage = () => {
+    localStorage.setItem("listaCarroKey", JSON.stringify(listaCarro));
+};
 window.borrarJuego = (codigo) => {
     // Agregar logica de borrar.
     
