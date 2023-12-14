@@ -26,6 +26,12 @@ body {
 }
 
 .linkEliminar {
-    color: #eee;
-    font-style: italic;
+  color: #eee;
+  font-style: italic;
+  background: none;
+  border:transparent;
+}
+
+.linkEliminar:hover {
+color: #c02828;
 }
