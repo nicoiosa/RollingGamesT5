@@ -35,3 +35,58 @@ imagenUCar.src = juego.imagenU;
 imagenDCar.src = juego.imagenD;
 imagenTCar.src = juego.imagenT;
 imagenCCar.src = juego.imagenC;
+
+//logica para agregar a lista de deseados.
+
+// Variables
+
+const btnAgregarLista = document.querySelector("#btnAgregarLista");
+const listaDeseados = JSON.parse(localStorage.getItem("listaDeseadosKey")) || [];
+const btnAgregarCarro = document.querySelector("#btnAgregarCarro");
+const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey")) || [];
+
+// Funciones
+
+const guardarEnLocalStorage = () => {
+  // Guardar y Actualizar en este caso es lo mismo
+  localStorage.setItem("listaDeseadosKey", JSON.stringify(listaDeseados));
+};
+const crearDeseado = () => {
+  const agregado = ` ❤️ Agregado`;
+
+  if(btnAgregarLista.innerHTML != agregado) {
+    // 1: tomar info. (¿Cuál info?)
+    console.log(juego);
+  
+    // 2: guardar objeto en lista deseados.
+    listaDeseados.push(juego); 
+  
+    // 3: guardar lista deseados en localStorage
+    guardarEnLocalStorage();
+  
+    // 4: deshabilitar el botón.
+    btnAgregarLista.innerHTML = ` ❤️ Agregado`
+  }
+}
+const crearItemCarro = () => {
+  const agregado = ` 🛒 Agregado`;
+
+  if(btnAgregarCarro.innerHTML != agregado) {
+    // 1: tomar info. (¿Cuál info?)
+    console.log(juego);
+  
+    // 2: guardar objeto en lista carro.
+    listaCarro.push(juego);
+  
+    // 3: guardar lista deseados en localStorage
+    guardarEnLocalStorage();
+  
+    // 4: deshabilitar el botón.
+    btnAgregarCarro.innerHTML = ` 🛒 Agregado`
+  }
+}
+
+// Resto de la lógica
+
+btnAgregarLista.addEventListener("click",crearDeseado);
+btnAgregarCarro.addEventListener("click",crearItemCarro);

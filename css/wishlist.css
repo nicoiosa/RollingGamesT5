@@ -29,3 +29,7 @@ body {
     color: #eee;
     font-style: italic;
 }
+
+.linkEliminar:hover {
+  color: #c02828;
+}
