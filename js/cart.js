@@ -39,9 +39,7 @@ const cargaInicial = () => {
             subtotal += numeroPrecio;
         });
         crearResumen(subtotal);
-    } else {
-        alert("No hay juegos en tu carrito.");
-    }
+    } 
 }
 const guardarEnLocalStorage = () => {
     localStorage.setItem("listaCarroKey", JSON.stringify(listaCarro));

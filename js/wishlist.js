@@ -35,9 +35,7 @@ const crearCard = (juego) => {
 const cargaInicial = () => {
   if (listaJuegos.length > 0) {
     listaJuegos.map((itemJuego) => crearCard(itemJuego));
-  } else {
-    alert("No hay juegos en la lista de deseos.");
-  }
+  } 
 };
 const guardarEnLocalStorage = () => {
   // Guardar y Actualizar en este caso es lo mismo

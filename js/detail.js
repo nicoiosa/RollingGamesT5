@@ -102,7 +102,6 @@ const valoracionForm = document.getElementById("valoracionForm"),
 
 function calcularValoracion() {
   const arr = juego.reseñas;
-  console.log(arr);
   if (arr.length === 0) {
     calificacion.innerText = "No hay valoraciones";
     return;
@@ -113,7 +112,6 @@ function calcularValoracion() {
   );
   const promedio = Math.round((suma / arr.length) * 10) / 10;
   calificacion.innerText = promedio;
-  console.log(suma);
 }
 
 function subirValoracion(e) {
@@ -130,23 +128,6 @@ function limpiarform() {
 function guardarEnLStorage() {
   localStorage.setItem("listaJuegosKey", JSON.stringify(listaJuegos));
 }
-function dibujarCard() {
-  if (comentario.value.length > 5) {
-    const nuevaReseña = document.createElement("div");
-    nuevaReseña.className = "col-4 tamaño_cards_sm";
-    nuevaReseña.innerHTML = `<div class="card card_opiniones">
-    <div class="card-body">
-        <h5 class="card-title card_color_blanco">Xx.Dylan05.xX</h5>
-        <hr>
-        <p class="card-text card_color_texto">
-            "${comentario.value}"
-        </p>
-    </div>
-</div>`;
-    reseñasPadre.appendChild(nuevaReseña);
-  }
-}
 
 valoracionForm.addEventListener("submit", subirValoracion);
 calcularValoracion();
-dibujarCard()
