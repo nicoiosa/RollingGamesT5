@@ -2,6 +2,8 @@ const parametroURL = new URLSearchParams(window.location.search);
 
 const listaJuegos = JSON.parse(localStorage.getItem("listaDeseadosKey"));
 
+const listaCarro = JSON.parse(localStorage.getItem("listaCarroKey"));
+
 const crearCard = (juego) => {
   const padreCard = document.querySelector("#padreCard");
   padreCard.innerHTML += `
@@ -24,8 +26,7 @@ const crearCard = (juego) => {
             </div>
             <div class="text-center card-footer bg-dark">
                 <button class="linkEliminar me-1" onclick='borrarJuego("${juego.codigo}")'>Eliminar</button>
-                <a href="#" class="btn btnCuadrado"
-                >Agregar al Carrito</a>
+                <button href="#" class="btn btnCuadrado" onclick='crearItemCarro("${juego.codigo}")' id="btnCarro">Agregar al Carrito</button>
             </div>
         </div>
     </div>
@@ -41,6 +42,10 @@ const cargaInicial = () => {
 const guardarEnLocalStorage = () => {
   // Guardar y Actualizar en este caso es lo mismo
   localStorage.setItem("listaDeseadosKey", JSON.stringify(listaJuegos));
+};
+const guardarEnLocalStorageCarro = () => {
+  // Guardar y Actualizar en este caso es lo mismo
+  localStorage.setItem("listaCarroKey", JSON.stringify(listaCarro));
 };
 window.borrarJuego = (codigo) => {
   // Agregar logica de borrar.
@@ -69,5 +74,26 @@ window.borrarJuego = (codigo) => {
     timer: 3000,
   });
 };
+window.crearItemCarro = (codigo) => {
+    // 1: tomar info. (¿Cuál info?)
+    const posicionJuego = listaJuegos.findIndex(
+        (itemJuego) => itemJuego.codigo === codigo
+    );
+    
+    // 2: guardar objeto en lista carro.
+    listaCarro.push(listaJuegos[posicionJuego]);
+
+    // 3: guardar lista deseados en localStorage
+    guardarEnLocalStorageCarro();
+
+    Swal.fire({
+        icon: "success",
+        title: "VideoJuego Agregado a Carrito con Éxito",
+        showConfirmButton: false,
+        background: "#343a40",
+        color: "#fff",
+        timer: 3000,
+      });
+}
 
 cargaInicial();
